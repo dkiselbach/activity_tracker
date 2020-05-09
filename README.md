@@ -1,4 +1,4 @@
-# Ruby on Rails Tutorial sample application
+# Activity Tracker App
 
 This is the an activity tracker that utilizes the Strava API. The goal of this app is to provide advanced analytics for runners and cyclists.
 
