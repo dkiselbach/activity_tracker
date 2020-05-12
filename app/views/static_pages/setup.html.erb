@@ -1,7 +1,13 @@
 <% provide(:title, "Setup") %>
 <h1>Setup</h1>
+<% if current_user.auth.present? %>
 <p>
-  Connect to Strava in order to sync your
-  activities to the Activity Tracker App.
+  Strava is already connected. If you are experiencing issues, click the button below.
 </p>
-<%= link_to "Connect to Strava", authorize %>
+  <%= link_to "Reconnect to Strava", auth_url, :class => "btn btn-primary" %>
+<% else %>
+<p>
+  Connect to Strava in order to sync your activities to the Activity Tracker App.
+</p>
+  <%= link_to "Connect to Strava", auth_url, :class => "btn btn-primary" %>
+<% end %>
