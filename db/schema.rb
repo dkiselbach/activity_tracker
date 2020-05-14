@@ -10,7 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_12_030041) do
+ActiveRecord::Schema.define(version: 2020_05_14_184825) do
+
+  create_table "activities", force: :cascade do |t|
+    t.decimal "distance"
+    t.integer "time"
+    t.decimal "avg_hr"
+    t.decimal "calories"
+    t.integer "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "strava_id"
+    t.string "name"
+    t.string "activity_type"
+    t.index ["strava_id"], name: "index_activities_on_strava_id", unique: true
+  end
 
   create_table "auths", force: :cascade do |t|
     t.string "app_name"
@@ -39,5 +53,6 @@ ActiveRecord::Schema.define(version: 2020_05_12_030041) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "activities", "users"
   add_foreign_key "auths", "users"
 end

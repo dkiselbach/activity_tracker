@@ -1,0 +1,5 @@
+<% provide(:title, "Sync Activities") %>
+<h1>Sync Activities</h1>
+<p>Click the button to sync your activities.
+  <%= button_to("Sync my activities", activities_path,
+                                      method: :post, class: "btn btn-primary") %></p>
