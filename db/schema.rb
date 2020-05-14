@@ -10,11 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_14_184825) do
+ActiveRecord::Schema.define(version: 2020_05_14_195105) do
 
   create_table "activities", force: :cascade do |t|
     t.decimal "distance"
-    t.integer "time"
     t.decimal "avg_hr"
     t.decimal "calories"
     t.integer "user_id", null: false
@@ -23,6 +22,7 @@ ActiveRecord::Schema.define(version: 2020_05_14_184825) do
     t.integer "strava_id"
     t.string "name"
     t.string "activity_type"
+    t.integer "activity_time"
     t.index ["strava_id"], name: "index_activities_on_strava_id", unique: true
   end
 
