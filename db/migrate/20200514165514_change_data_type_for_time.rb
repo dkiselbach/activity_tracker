@@ -1,5 +1,8 @@
 class ChangeDataTypeForTime < ActiveRecord::Migration[6.0]
-    def change
-      change_column :activities, :time, 'integer USING CAST(time AS integer)'
-    end
+  def up
+    add_column :activities, :time, :integer
   end
+  def down
+    remove_columns :activities, :time, :datetime
+  end
+end
