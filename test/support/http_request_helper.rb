@@ -50,11 +50,11 @@ module HttpRequestHelper
   end
 
   def stub_auth_request_success(options = {})
-    url = "https://www.strava.com/api/v3/athlete/activities"
+    url = "https://www.strava.com/oauth/token"
     status = options.fetch(:status, 200)
     response_body = options.fetch(:response_body,
                                   json_string("auth_request_success.json"))
-    stub_request(:post, "https://www.strava.com/oauth/token").
+    stub_request(:post, url).
             with(
               body: {"client_id"=>"", "client_secret"=>"", "code"=>"Valid_Code", "grant_type"=>"authorization_code", "redirect_uri"=>"http://www.example.com/auth/strava/code"},
               headers: {
@@ -67,7 +67,23 @@ module HttpRequestHelper
             to_return(status: status, body: response_body)
   end
 
-
+  def stub_auth_request_failure(options = {})
+    url = "https://www.strava.com/oauth/token"
+    status = options.fetch(:status, 400)
+    response_body = options.fetch(:response_body,
+                                  json_string("auth_request_failure.json"))
+    stub_request(:post, url).
+            with(
+              body: {"client_id"=>"", "client_secret"=>"", "code"=>"Invalid_Code", "grant_type"=>"authorization_code", "redirect_uri"=>"http://www.example.com/auth/strava/code"},
+              headers: {
+          	  'Accept'=>'*/*',
+          	  'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+          	  'Content-Type'=>'application/x-www-form-urlencoded',
+          	  'Host'=>'www.strava.com',
+          	  'User-Agent'=>'Ruby'
+              }).
+            to_return(status: status, body: response_body)
+  end
 
   def stub_athlete_auth_error(options = {})
     url = "https://www.strava.com/api/v3/athlete"

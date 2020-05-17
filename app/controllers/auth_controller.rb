@@ -2,8 +2,8 @@ class AuthController < ApplicationController
   before_action :authenticate_user!
 
   def create
-    @auth = current_user.build_auth()
     if params[:code].present? && params[:scope] == "read,activity:read"
+      @auth = current_user.build_auth()
       if @auth.access(params[:code], auth_strava_code_url)
         flash[:success] = "Strava has successfully connected."
         redirect_to root_path
@@ -12,8 +12,7 @@ class AuthController < ApplicationController
         redirect_to setup_path
       end
     else
-      flash[:danger] = "You need to authorize the integration from Strava. Please try again, and ensure to include
-      activities in the authentication."
+      flash[:danger] = "You need to authorize the integration from Strava. Please try again, and ensure to include activities in the authentication."
       redirect_to setup_path
     end
   end
