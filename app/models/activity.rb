@@ -6,6 +6,6 @@ class Activity < ApplicationRecord
   def set_results(results)
     self.update(strava_id: "#{results["id"]}", distance: "#{results["distance"]}",
       activity_time: "#{results["moving_time"]}", avg_hr: "#{results["average_heartrate"]}",
-      activity_type: "#{results["type"]}")
+      activity_type: "#{results["type"]}", name: "#{results["name"]}")
   end
 end

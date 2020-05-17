@@ -9,3 +9,9 @@ strava_valid:
   token: Valid_Token
   refresh_token: Valid_Refresh
   user_id: 3
+
+strava_valid_refresh:
+  app_name: Strava
+  token: Invalid_Token
+  refresh_token: Valid_Refresh
+  user_id: 5

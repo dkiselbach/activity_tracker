@@ -11,7 +11,7 @@ class ActivityController < ApplicationController
     @results.each do |i|
       @activity = current_user.activity.build.set_results(i)
     end
-      flash[:success] = "Your activities were synced succesfully"
+      flash[:success] = "Your activities were synced succesfully."
       redirect_to sync_activities_path
   end
 

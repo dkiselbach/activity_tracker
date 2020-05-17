@@ -92,7 +92,7 @@ class UserFlowTest < ActionDispatch::IntegrationTest
     follow_redirect!
     assert_equal "Your account has been updated successfully.", flash[:notice]
     user.reload
-    assert_equal user.name, name
+    assert_equal name, user.name
     get root_url
     assert flash.empty?
   end

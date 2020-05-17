@@ -10,16 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_14_200419) do
+ActiveRecord::Schema.define(version: 2020_05_17_144957) do
 
   create_table "activities", force: :cascade do |t|
-    t.decimal "distance"
-    t.decimal "avg_hr"
-    t.decimal "calories"
+    t.integer "distance"
+    t.integer "avg_hr"
+    t.integer "calories"
     t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "strava_id"
+    t.integer "strava_id"
     t.string "name"
     t.string "activity_type"
     t.integer "activity_time"

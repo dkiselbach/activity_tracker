@@ -1,0 +1,27 @@
+{
+    "token_type": "Bearer",
+    "expires_at": 1589311293,
+    "expires_in": 17518,
+    "refresh_token": "Valid_Refresh",
+    "access_token": "Valid_Token",
+    "athlete": {
+        "id": 12345679,
+        "username": "dtest",
+        "resource_state": 2,
+        "firstname": "Dylan",
+        "lastname": "Test",
+        "city": "San Francisco",
+        "state": "California",
+        "country": "United States",
+        "sex": "M",
+        "premium": true,
+        "summit": true,
+        "created_at": "2017-03-27T04:55:28Z",
+        "updated_at": "2020-05-11T01:08:46Z",
+        "badge_type_id": 1,
+        "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/athletes/20730280/12345679/2/medium.jpg",
+        "profile": "https://dgalywyr863hv.cloudfront.net/pictures/athletes/20730280/12345679/2/large.jpg",
+        "friend": null,
+        "follower": null
+    }
+}
