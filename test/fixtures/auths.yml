@@ -1,9 +1,11 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+strava_invalid:
+  app_name: Strava
+  token: Invalid_Token
+  refresh_token: Invalid_Refresh
+  user_id: 2
 
-one:
-  content: MyText
-  user: one
-
-two:
-  content: MyText
-  user: two
+strava_valid:
+  app_name: Strava
+  token: Valid_Token
+  refresh_token: Valid_Refresh
+  user_id: 3

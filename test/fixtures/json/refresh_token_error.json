@@ -1,0 +1,12 @@
+[
+  {
+    "message": "Bad Request",
+    "errors": [
+      {
+        "resource": "RefreshToken",
+        "field": "refresh_token",
+        "code": "invalid"
+      }
+    ]
+  }
+]

@@ -1,7 +1,7 @@
 class Auth < ApplicationRecord
   include HttpRequest
   belongs_to :user
-  validates :app_name, :token, presence: true
+  validates :app_name, :token, :user_id, presence: true
 
   def access(code, redirect_uri)
 

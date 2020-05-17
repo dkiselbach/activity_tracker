@@ -1,13 +1,35 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+run:
+  distance: 1000
+  avg_hr: 169
+  user_id: 1
+  strava_id: 123456
+  name: Fun Run
+  activity_type: run
+  activity_time: 69
 
-one:
-  distance: 9.99
-  time: 2020-05-13 06:24:05
-  avg_hr: 9.99
-  references: 
+bike:
+  distance: 1000
+  avg_hr: 169
+  user_id: 1
+  strava_id: 123457
+  name: Fun Bike
+  activity_type: bike
+  activity_time: 69
 
-two:
-  distance: 9.99
-  time: 2020-05-13 06:24:05
-  avg_hr: 9.99
-  references: 
+swim:
+  distance: 1000
+  avg_hr: 169
+  user_id: 2
+  strava_id: 123446
+  name: Fun Run
+  activity_type: run
+  activity_time: 69
+
+hike:
+  distance: 1000
+  avg_hr: 169
+  user_id: 2
+  strava_id: 123447
+  name: Fun Bike
+  activity_type: bike
+  activity_time: 69

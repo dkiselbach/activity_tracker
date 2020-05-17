@@ -1,0 +1,26 @@
+dylan:
+  name: Dylan Test
+  email: dylan@example.org
+  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
+  id: 1
+  confirmed_at: <%= Time.zone.now %>
+
+dustin:
+  name: Dustin Test
+  email: dustin@example.org
+  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
+  id: 2
+  confirmed_at: <%= Time.zone.now %>
+
+emily:
+  name: Emily Test
+  email: emily@example.org
+  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
+  id: 3
+  confirmed_at: <%= Time.zone.now %>
+
+archer:
+  name: Archer Test
+  email: archer@example.org
+  encrypted_password: <%= User.new.send(:password_digest, 'password') %>
+  id: 4

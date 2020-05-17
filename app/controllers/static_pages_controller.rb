@@ -1,5 +1,5 @@
 class StaticPagesController < ApplicationController
-  before_action :authenticate_user!, only: [:sync_activities]
+  before_action :authenticate_user!, only: [:setup, :sync_activities]
 
   def home
   end
@@ -7,15 +7,15 @@ class StaticPagesController < ApplicationController
   def help
   end
 
-  def setup
-  end
-
-  def sync_activities
-  end
-
   def about
   end
 
   def contact
+  end
+
+  def setup
+  end
+
+  def sync_activities
   end
 end
