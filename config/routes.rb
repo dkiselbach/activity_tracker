@@ -8,5 +8,12 @@ Rails.application.routes.draw do
   get  '/contact',    to: 'static_pages#contact'
   get '/sync_activities', to: 'static_pages#sync_activities'
   post 'activities', to: 'activity#create'
-  devise_for :users
+  devise_for :users, controllers: { sessions: 'users/sessions'}
+
+  namespace :api do
+    namespace :v1 do
+      resources :activities
+      resources :users
+    end
+  end
 end
