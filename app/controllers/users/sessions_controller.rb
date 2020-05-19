@@ -2,6 +2,7 @@
 
 class Users::SessionsController < Devise::SessionsController
   # before_action :configure_sign_in_params, only: [:create]
+  skip_before_action :verify_authenticity_token, only: [:create]
   respond_to :html, :json
 
   # GET /resource/sign_in
