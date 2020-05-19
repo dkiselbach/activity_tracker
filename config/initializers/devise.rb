@@ -5,7 +5,7 @@
 Devise.setup do |config|
 
   config.jwt do |jwt|
-    jwt.secret = Rails.application.credentials.secret_key_base
+    jwt.secret = ENV['DEVISE_SECRET_KEY']   #instead of Rails.application.credentials.secret_key_base
     jwt.dispatch_requests = [['POST', %r{^/users/sign_in$}]]
     jwt.expiration_time = 60.minutes.to_i
   end
