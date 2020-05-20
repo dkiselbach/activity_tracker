@@ -12,7 +12,7 @@ class User::PasswordsController < Devise::PasswordsController
     if successfully_sent?(resource)
       render :status => 200,
              :json => { :success => ["Email sent"],
-                        :email => resource.email }
+                        :email => [resource.email] }
     else
       render :status => :unprocessable_entity,
              :json => { :error => resource.errors }
@@ -24,7 +24,7 @@ class User::PasswordsController < Devise::PasswordsController
     if resource.errors.empty?
       render  :status => 200,
               :json => { :success => ["Password reset"],
-                         :email => resource.email }
+                         :email => [resource.email] }
     else
       render :status => :unauthorized,
              :json => { :error => resource.errors }

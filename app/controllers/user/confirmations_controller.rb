@@ -7,13 +7,11 @@ class User::ConfirmationsController < Devise::ConfirmationsController
 
     if successfully_sent?(resource)
       render :status => 200,
-             :json => { :success => true,
-                        :info => "email sent",
-                        :email => resource.email }
+             :json => { :success => ["email sent"],
+                        :email => [resource.email] }
     else
       render :status => :unauthorized,
-             :json => { :success => false,
-                        :info => resource.errors }
+             :json => { :error => resource.errors }
     end
   end
 
@@ -22,13 +20,11 @@ class User::ConfirmationsController < Devise::ConfirmationsController
 
     if resource.errors.empty?
       render :status => 200,
-             :json => { :success => true,
-                        :info => "User confirmed",
-                        :email => resource.email }
+             :json => { :success => ["User confirmed"],
+                        :email => [resource.email] }
     else
       render :status => :unauthorized,
-             :json => { :success => false,
-                        :info => resource.errors }
+             :json => { :error => resource.errors }
     end
   end
 end
