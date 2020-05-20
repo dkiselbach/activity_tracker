@@ -1,30 +1,34 @@
-# frozen_string_literal: true
-
 class User::ConfirmationsController < Devise::ConfirmationsController
-  # GET /resource/confirmation/new
-  # def new
-  #   super
-  # end
+  skip_before_action :verify_authenticity_token, only: [:create, :show]
+  wrap_parameters :user
 
-  # POST /resource/confirmation
-  # def create
-  #   super
-  # end
+  def create
+    self.resource = resource_class.send_confirmation_instructions(resource_params)
 
-  # GET /resource/confirmation?confirmation_token=abcdef
-  # def show
-  #   super
-  # end
+    if successfully_sent?(resource)
+      render :status => 200,
+             :json => { :success => true,
+                        :info => "email sent",
+                        :email => resource.email }
+    else
+      render :status => :unauthorized,
+             :json => { :success => false,
+                        :info => resource.errors }
+    end
+  end
 
-  # protected
+  def show
+    self.resource = resource_class.confirm_by_token(params[:confirmation_token])
 
-  # The path used after resending confirmation instructions.
-  # def after_resending_confirmation_instructions_path_for(resource_name)
-  #   super(resource_name)
-  # end
-
-  # The path used after confirmation.
-  # def after_confirmation_path_for(resource_name, resource)
-  #   super(resource_name, resource)
-  # end
+    if resource.errors.empty?
+      render :status => 200,
+             :json => { :success => true,
+                        :info => "User confirmed",
+                        :email => resource.email }
+    else
+      render :status => :unauthorized,
+             :json => { :success => false,
+                        :info => resource.errors }
+    end
+  end
 end

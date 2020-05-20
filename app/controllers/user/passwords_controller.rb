@@ -4,6 +4,7 @@ class User::PasswordsController < Devise::PasswordsController
   # Render the #edit only if coming from a reset password email link
   append_before_action :assert_reset_token_passed, only: :update
   after_action -> { request.session_options[:skip] = true }
+  wrap_parameters :user
 
   def create
     self.resource = resource_class.send_reset_password_instructions(resource_params)
@@ -21,7 +22,7 @@ class User::PasswordsController < Devise::PasswordsController
   end
 
   def update
-    self.resource = resource_class.reset_password_by_token(params[:users])
+    self.resource = resource_class.reset_password_by_token(params[:user])
     if resource.errors.empty?
       render  :status => 200,
               :json => { :success => true,
@@ -38,7 +39,7 @@ class User::PasswordsController < Devise::PasswordsController
 
     # Check if a reset_password_token is provided in the request
     def assert_reset_token_passed
-      if params[:users][:reset_password_token].blank?
+      if params[:user][:reset_password_token].blank?
         render :status => :unprocessable_entity,
                :json => { :success => false,
                           :info => "Reset password token cannot be blank." }

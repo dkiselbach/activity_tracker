@@ -8,8 +8,8 @@ Rails.application.routes.draw do
   get  '/contact',    to: 'static_pages#contact'
   get '/sync_activities', to: 'static_pages#sync_activities'
   post 'activities', to: 'activity#create'
-  post '/api/v1/login', to: 'users/sessions#create'
-  devise_for :users, controllers: { sessions: 'user/sessions', registrations: 'user/registrations', passwords: "user/passwords"}
+  devise_for :users, controllers: { sessions: 'user/sessions', registrations: 'user/registrations',
+                        passwords: "user/passwords", confirmations: "user/confirmations"}
 
   namespace :api do
     namespace :v1 do
