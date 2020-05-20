@@ -16,11 +16,11 @@ class User::SessionsController < Devise::SessionsController
     if User.find_by(email: sign_in_params[:email])
       render :status => :unauthorized,
              :json => { :success => false,
-                        :info => "The password you’ve entered is incorrect." }
+                        :password => "Password doesn't match." }
     else
       render :status => :unauthorized,
              :json => { :success => false,
-                        :info => "The email you’ve entered doesn’t match any account." }
+                        :email => "Email doesn't exist." }
     end
   end
 end
