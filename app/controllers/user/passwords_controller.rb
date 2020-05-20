@@ -11,13 +11,11 @@ class User::PasswordsController < Devise::PasswordsController
 
     if successfully_sent?(resource)
       render :status => 200,
-             :json => { :success => true,
-                        :info => "email sent",
+             :json => { :success => ["Email sent"],
                         :email => resource.email }
     else
       render :status => :unprocessable_entity,
-             :json => { :success => false,
-                        :info => resource.errors }
+             :json => { :error => resource.errors }
     end
   end
 
@@ -25,13 +23,11 @@ class User::PasswordsController < Devise::PasswordsController
     self.resource = resource_class.reset_password_by_token(params[:user])
     if resource.errors.empty?
       render  :status => 200,
-              :json => { :success => true,
-                        :info => "Password reset",
-                        :email => resource.email }
+              :json => { :success => ["Password reset"],
+                         :email => resource.email }
     else
       render :status => :unauthorized,
-             :json => { :success => false,
-                        :info => resource.errors }
+             :json => { :error => resource.errors }
     end
   end
 
@@ -41,8 +37,7 @@ class User::PasswordsController < Devise::PasswordsController
     def assert_reset_token_passed
       if params[:user][:reset_password_token].blank?
         render :status => :unprocessable_entity,
-               :json => { :success => false,
-                          :info => "Reset password token cannot be blank." }
+               :json => { :error => { :reset_password_token => ["is blank"] } }
       end
     end
 end
