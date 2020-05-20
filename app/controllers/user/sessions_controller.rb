@@ -6,8 +6,7 @@ class User::SessionsController < Devise::SessionsController
   def create
       self.resource = warden.authenticate!(:scope => resource_name, :recall => "#{controller_path}#failure")
       render :status => 200,
-             :json => { :success => true,
-                        :info => "Login successful",
+             :json => { :success => "Login successful",
                         :email => resource.email,
                         :name => resource.name}
   end
@@ -15,12 +14,10 @@ class User::SessionsController < Devise::SessionsController
   def failure
     if User.find_by(email: sign_in_params[:email])
       render :status => :unauthorized,
-             :json => { :success => false,
-                        :password => "Password doesn't match." }
+             :json => { :error => { :password => "doesn't match Password" }}
     else
       render :status => :unauthorized,
-             :json => { :success => false,
-                        :email => "Email doesn't exist." }
+             :json => { :error => { :email => "Email doesn't exist" } }
     end
   end
 end
