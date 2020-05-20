@@ -6,7 +6,10 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable,
          :confirmable, :jwt_authenticatable, jwt_revocation_strategy: Devise::JWT::RevocationStrategies::Null
 
-  #def jwt_payload
-  #  super.merge({ 'username' => self.name })
-  #end
+    def jwt_payload
+       {
+         'eml' => self.email,
+         'nme' => self.name
+       }
+    end
 end
