@@ -3,15 +3,14 @@ class Auth < ApplicationRecord
   belongs_to :user
   validates :app_name, :token, :user_id, presence: true
 
-  def access(code, redirect_uri)
+  def access(code)
 
     url = "#{ENV['STRAVA_SITE_BASE']}/oauth/token"
     body = {
       "grant_type" =>  "authorization_code",
       "code" => "#{code}",
       "client_id" => "#{ENV['STRAVA_CLIENT_ID']}",
-      "client_secret" => "#{ENV['STRAVA_CLIENT_SECRET']}",
-      "redirect_uri" => "#{redirect_uri}"
+      "client_secret" => "#{ENV['STRAVA_CLIENT_SECRET']}"
     }
 
     post(url, body)

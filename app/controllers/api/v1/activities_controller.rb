@@ -48,11 +48,11 @@ class Api::V1::ActivitiesController < ApplicationController
       if current_user.auth
         if current_user.auth.check == false
           render :status => :unprocessable_entity,
-                 :json => { :error => ["Something went wrong with your authentication. Please connect to Strava again."] }
+                 :json => { :error => { :token => ["Tokens are invalid" ]} }
         end
       else
         render :status => :unprocessable_entity,
-               :json => { :error => ["Connect to Strava first before syncing your activities."] }
+               :json => { :error => { :auth => ["User has no Auth" ]} }
       end
     end
 end
