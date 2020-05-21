@@ -3,7 +3,6 @@ class ActivityController < ApplicationController
   before_action :authenticate_user!
   before_action :check_token
 
-
   def create
     url = "#{ENV['STRAVA_SITE_BASE']}/api/v3/athlete/activities"
 
@@ -11,8 +10,8 @@ class ActivityController < ApplicationController
     @results.each do |i|
       @activity = current_user.activity.build.set_results(i)
     end
-      flash[:success] = "Your activities were synced succesfully."
-      redirect_to sync_activities_path
+      render :status => 200,
+             :json => { :success => ["Activities synced"]}
   end
 
   private
@@ -20,12 +19,12 @@ class ActivityController < ApplicationController
     def check_token
       if current_user.auth
         if current_user.auth.check == false
-          flash[:danger] = "Something went wrong with your authentication. Please connect to Strava again."
-          redirect_to setup_path
+          render :status => :unprocessable_entity,
+                 :json => { :error => ["Something went wrong with your authentication. Please connect to Strava again."] }
         end
       else
-        flash[:danger] = "Connect to Strava first before syncing your activities."
-        redirect_to setup_path
+        render :status => :unprocessable_entity,
+               :json => { :error => ["Connect to Strava first before syncing your activities."] }
       end
     end
 end

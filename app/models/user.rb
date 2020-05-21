@@ -8,8 +8,8 @@ class User < ApplicationRecord
 
     def jwt_payload
        {
-         'eml' => self.email,
-         'nme' => self.name
+         'email' => self.email,
+         'name' => self.name
        }
     end
 end
