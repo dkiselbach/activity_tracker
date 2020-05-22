@@ -5,13 +5,14 @@ class Api::V1::ActivitiesController < ApplicationController
   before_action :check_token, only: [:create]
 
   def index
-    if params[:activity_type].present?
-     @activities = current_user.activity.where(activity_type: params[:activity_type]).page(params[:page])
-     render json: @activities
-    else
-     @activities = current_user.activity.page(params[:page])
-     render json: @activities
-    end
+     @activities = current_user.activity.reorder("created_at DESC").page(params[:page])
+     @current_page = params[:page].to_i if params[:page]
+     render :json => { "pagination" =>{
+                                       "current_page": @current_page || 1,
+                                       "total_pages": @activities.total_pages,
+                                       "total": @activities.count},
+                       "activities" => @activities
+                     }
   end
 
   def create
