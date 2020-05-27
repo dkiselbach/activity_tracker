@@ -5,7 +5,7 @@ class Api::V1::ActivitiesController < ApplicationController
   before_action :check_token, only: [:create]
 
   def index
-     @activities = current_user.activity.reorder("created_at DESC").page(params[:page])
+     @activities = current_user.activity.exclude_laps_splits.reorder("created_at DESC").page(params[:page])
      @current_page = params[:page].to_i if params[:page]
      render :json => { "pagination" =>{
                                        "current_page": @current_page || 1,
@@ -17,10 +17,16 @@ class Api::V1::ActivitiesController < ApplicationController
 
   def create
     url = "#{ENV['STRAVA_SITE_BASE']}/api/v3/athlete/activities"
+    detailed_url = "#{ENV['STRAVA_SITE_BASE']}/api/v3/activities"
 
-    @results = get(url, current_user.auth.token)
-    @results.each do |i|
-      @activity = current_user.activity.build.set_results(i)
+    response = get(url, current_user.auth.token)
+
+    response.each do |results|
+      @activity = current_user.activity.build
+      if @activity.set_results(results)
+        detailed_results = get("#{detailed_url}/#{results["id"]}?includeallefforts=false", current_user.auth.token)
+        @activity.set_detailed_results(detailed_results)
+      end
     end
       render :status => 200,
              :json => { :success => ["Activities synced"]}
@@ -28,7 +34,12 @@ class Api::V1::ActivitiesController < ApplicationController
 
   def show
     @activity = current_user.activity.find(params[:id])
-    render json: @activity
+    @activity_details = current_user.activity.exclude_laps_splits.find(params[:id])
+    @laps = @activity.laps
+    @splits = @activity.splits
+    render :json => { "activity" => @activity_details,
+                      "laps" => JSON.parse(@laps),
+                      "splits" => JSON.parse(@splits)}
   end
 
   def update

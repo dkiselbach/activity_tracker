@@ -1,0 +1,3308 @@
+{
+    "resource_state": 3,
+    "athlete": {
+        "id": 20730280,
+        "resource_state": 1
+    },
+    "name": "Lunch Run",
+    "distance": 19319.4,
+    "moving_time": 5905,
+    "elapsed_time": 6063,
+    "total_elevation_gain": 56.0,
+    "type": "Run",
+    "workout_type": null,
+    "id": 3432003922,
+    "external_id": "garmin_push_4913563623",
+    "upload_id": 3666009185,
+    "start_date": "2020-05-10T19:00:06Z",
+    "start_date_local": "2020-05-10T12:00:06Z",
+    "timezone": "(GMT-08:00) America/Los_Angeles",
+    "utc_offset": -25200.0,
+    "start_latlng": [
+        37.79,
+        -122.42
+    ],
+    "end_latlng": [
+        37.81,
+        -122.43
+    ],
+    "location_city": null,
+    "location_state": null,
+    "location_country": "United States",
+    "start_latitude": 37.79,
+    "start_longitude": -122.42,
+    "achievement_count": 9,
+    "kudos_count": 9,
+    "comment_count": 0,
+    "athlete_count": 1,
+    "photo_count": 0,
+    "map": {
+        "id": "a3432003922",
+        "polyline": "mgteFt_ejV[D{@BIHEREBi@?k@Ng@CSJKb@Eh@HzDCJIDc@?k@F]P[Je@BqARMRIBUCi@PgANi@BODCGm@FaAVk@Fe@@g@F{CJm@PsBRYHe@@u@HODo@HIFWD]?WB[Ha@@_@FSHm@?e@H[B_AR_AEo@Hc@Fi@VkADKCM?_AHUFULo@H}@Ng@V_AOq@BK?CBK@_AHC@CDc@EQAODOJQTc@XIJG?SGEEa@kAq@kAe@gAU]]Ww@w@QMOUK_@Ay@Mw@Ay@EW?WGsBIg@Ek@GqBIw@WuDGc@KiBOoAWqDEKIE]As@DOEKOEOCe@?_ABq@GqAFaBBkCCqAb@_CN{BLu@FeB@ORs@F_AH_A@_@FUFs@Vw@AUKiA@U~@sCj@aA\\c@T_@^_AJe@Te@BMTy@h@kARo@n@}AbAcBd@cAtBoDX_@ROPWjAsALSd@c@\\g@X[dByA\\_@l@k@l@y@t@u@TUTMf@e@\\Q~@q@|@eAn@m@x@e@nAoAlAq@hAeAl@g@j@_@x@{@bBsAl@m@NS`Ay@`@c@|BqBTY`Au@r@a@ZUtBcCdC{Bf@s@r@o@b@e@TOt@w@rAiAd@m@XQ^w@RYJWnBsBh@w@f@g@Tc@V]l@i@r@_AjAk@zAg@ZS`@OjAw@t@u@|@g@jA]p@IX?\\ER@PAb@FbAUz@Hb@Ad@K`@B~@?X@`@JbAB`AP~@D`@?b@FnBBr@HrADnBNdA?hBGNFL@jACXKf@[b@Kd@?|@ItCG`CQn@Ab@BND|@b@FFVd@R`ATl@Hh@t@`Cr@vCJXNRPDf@c@b@Yb@e@FK@e@I{@KuC?sBEwA?UFKFCx@ILBTJNBp@E\\I|AI`@GtAC~@@t@Gb@?ZC\\?x@GrBq@d@Kd@Qx@Of@Y~@YZOd@GPCP@f@G\\?nAE\\@n@JV@lAGz@OLG`@Ah@BhAGZ@nBOnAMb@A~@Xb@Rh@FbBt@pClB\\`@Xh@`Az@L@RILFBDLF|@HlAIj@@d@Mr@ItA?ZEdADx@IbBEVCP?PCb@S~@Cx@MT?`@EJ?BB@BEBa@HK?IGI?[NWD_BFk@EU?c@DODwAL}@AaABiAN]@g@AGAY?aBT]?a@Fk@Cg@KOKu@y@Sa@Ya@k@g@y@_AMME@aAi@s@[aCw@SCgAFk@NS?]DOJ_@@OFKJU@UH_A?_ALM?_@Ic@AaALgAMyACeAHqADWHQHURg@Pk@Ha@JaA\\{@TcA^QB{AFwBNYAWEy@Fq@@u@DuAB{@H{@MWDUFIDGHCZHrDRnB?l@HnA?TGRUPOTc@`@WJSGQYo@iBy@qBo@yBa@cBM_@IOWOaAYK?a@Ho@A]FeACg@FaDHk@Hg@?MD{@`@]FQ?[Go@?o@He@?_@FC@ADUMiBWwCOkAAo@Ei@AeCMwE_@YGM@]HsAD{AMcAN_A?UF_ADITMLEN[Zq@`@w@p@[Pi@Re@HUHeAb@q@`@s@j@wB~BkAvAi@h@wCdEKRs@|@s@r@i@Z]b@_@XWj@WPiAbAoAvAOJYFWJOd@MP]^_@XY\\m@f@KNe@b@W\\o@f@S^URMN}AdAsBbBm@r@_Ar@aBzAc@Ze@h@i@Vk@Lc@ZOPg@t@a@^e@Xm@n@[Ra@\\e@VuAnAc@XOLCNMLq@ZSXIRUNYVo@r@g@b@s@t@i@^yAbBSZYXi@p@m@bAITi@dAGR]n@SVa@t@]Zc@|@YjAe@tAc@dA_@^a@|@W^IPMt@YdAq@hBYvAg@~AWbAIj@EnAMp@Eb@Sb@IhAOpDEb@UbAOfBEpCDj@Bd@G`A?~A@n@JhAGxA@LDJJFXJ\\@\\KL?HFHZRhD?hADPJRFTCj@@bA^fEFtAXjCTvGRvANh@Tf@x@zAlAvCFf@BbAA\\BNEf@S~@Ip@[nAIl@KNWTy@h@m@Tm@No@^c@FW?iBL}@CgB]mBwAe@o@Q]KYMw@EoA@c@FSV_@?MEII?MNIfABl@DZT|@Rn@t@jA~@v@hAf@`AR`@Ff@BT?t@MVA\\DJDFL@LC|CCn@Al@D\\DPLXZb@h@n@h@v@",
+        "resource_state": 3,
+        "summary_polyline": "mgteFt_ejVwAHU`@i@?k@Ng@CSJQlAHzDMPoAFy@\\wBVWVUCqB`@}@@m@FmB^iFTm@PiFh@uEl@s@Pm@?aC`@_AEo@Hc@Fi@VeDJk@TmBXg@V_AO}@BwAVu@G_@P_Az@[GyA}Ca@cAYa@gB}AS[GYAy@Mw@O}EOsAGqB}A}ROQ{A@MMI]CaABmAGqAFaB?}Eb@_CN{BLu@FeBTcAR_DNiAVw@M_B@U~@sC~AeCj@eBTe@XgAh@kAlAaDtEcIvFwGdByAnD{DpDmClBsBx@e@nAoAlAq@hAeAxAgA|CoCtHkHpCmBtBcCdC{Bf@s@|GuGXQ~@iBnBsBpA_Bl@aAl@i@r@_AdFwBjAw@p@s@zAs@bB]|AEb@FbAUz@HlAMvBD`@J~@@pAThFNvF^nDG\\HjAC`Ag@b@KzJc@rA@lAh@^l@R`AtAxEr@vCZl@PDjA}@j@q@@e@I{@KuCEkE?UFK`AMr@RnEa@tCAlES~DoAx@Of@Y`Cq@xDOdBNlAGhAWpDCbF_@bBl@h@FbBt@pClBv@jA`Az@L@RI^T|@HxBGxAWvD?fESt@W`ESCFa@H_@Gs@T_BFaAEkCX_C@gBPiACaBTkBBw@Wu@y@m@cAsBuB{BcAuC{@eD\\OJ_@@[Rk@J_A?_ALqAKaALaDQwCNgBx@mATsEvAsEVq@GwFR{@H{@Mm@LQNCZHrDRnBHrCGRe@f@c@`@WJSGQYiB{E_B}Fa@_@aAYaEJ}GZgBn@}AGuAHe@NUMiBWcMg@qFg@_CP{AMcAN_A?uAL]r@[Zq@`@w@p@eAd@aCv@eBlAmF`GwEvGs@r@i@Z}@|@Wj@aBtAoAvAaA^]v@_GxFw@bA}AdAsBbBm@r@kFtEuAd@c@Zw@fAgAx@m@n@}ErDa@j@q@Z]l@o@f@kClCi@^qDjEgCbFu@lA]Zc@|@YjAiAzC_@^cAnBMt@kAnDYvA_AbDOzBStASb@YzF[fBOfBEpCHpAG`A?~ALxBGxAFXd@R\\@j@KHFHZRhD?hAXz@AnB^fEFtAXjCTvGb@`CnAbClAvCJjBCtAcAnFc@d@y@h@{Ad@o@^eDT}@CgB]mBwAw@mAYqACsB^s@EWWNIfAHhAh@lBt@jA~@v@hAf@bBZ|@BlAOh@JHZGlEBjARj@nBjC"
+    },
+    "trainer": false,
+    "commute": false,
+    "manual": false,
+    "private": false,
+    "visibility": "everyone",
+    "flagged": false,
+    "gear_id": null,
+    "from_accepted_tag": false,
+    "upload_id_str": "3666009185",
+    "average_speed": 3.272,
+    "max_speed": 5.3,
+    "average_cadence": 85.6,
+    "average_temp": 24,
+    "has_heartrate": true,
+    "average_heartrate": 145.9,
+    "max_heartrate": 172.0,
+    "heartrate_opt_out": false,
+    "display_hide_heartrate_option": true,
+    "elev_high": 54.2,
+    "elev_low": -14.2,
+    "pr_count": 3,
+    "total_photo_count": 0,
+    "has_kudoed": false,
+    "suffer_score": 32.0,
+    "description": null,
+    "calories": 1351.0,
+    "perceived_exertion": null,
+    "prefer_perceived_exertion": null,
+    "segment_efforts": [
+        {
+            "id": 2694548871362176035,
+            "resource_state": 2,
+            "name": "Polk Straightaway",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 225,
+            "moving_time": 220,
+            "start_date": "2020-05-10T19:03:54Z",
+            "start_date_local": "2020-05-10T12:03:54Z",
+            "distance": 718.09,
+            "start_index": 221,
+            "end_index": 440,
+            "average_cadence": 86.1,
+            "average_heartrate": 133.0,
+            "max_heartrate": 140.0,
+            "segment": {
+                "id": 3870210,
+                "resource_state": 2,
+                "name": "Polk Straightaway",
+                "activity_type": "Run",
+                "distance": 718.09,
+                "average_grade": -1.3,
+                "maximum_grade": 10.6,
+                "elevation_high": 49.1,
+                "elevation_low": 34.8,
+                "start_latlng": [
+                    37.797023076564074,
+                    -122.42204938083887
+                ],
+                "end_latlng": [
+                    37.80337865464389,
+                    -122.42333658970892
+                ],
+                "start_latitude": 37.797023076564074,
+                "start_longitude": -122.42204938083887,
+                "end_latitude": 37.80337865464389,
+                "end_longitude": -122.42333658970892,
+                "climb_category": 0,
+                "city": "San Francisco",
+                "state": "CA",
+                "country": "United States",
+                "private": false,
+                "hazardous": false,
+                "starred": false
+            },
+            "pr_rank": null,
+            "achievements": [],
+            "kom_rank": null,
+            "hidden": false
+        },
+        {
+            "id": 2694548871362176221,
+            "resource_state": 2,
+            "name": "Cuttin it thru Carpark",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 179,
+            "moving_time": 179,
+            "start_date": "2020-05-10T19:13:24Z",
+            "start_date_local": "2020-05-10T12:13:24Z",
+            "distance": 537.3,
+            "start_index": 773,
+            "end_index": 946,
+            "average_cadence": 86.2,
+            "average_heartrate": 136.3,
+            "max_heartrate": 139.0,
+            "segment": {
+                "id": 17553846,
+                "resource_state": 2,
+                "name": "Cuttin it thru Carpark",
+                "activity_type": "Run",
+                "distance": 537.3,
+                "average_grade": 0.0,
+                "maximum_grade": 1.4,
+                "elevation_high": 3.0,
+                "elevation_low": 1.6,
+                "start_latlng": [
+                    37.808631,
+                    -122.415511
+                ],
+                "end_latlng": [
+                    37.808477,
+                    -122.409571
+                ],
+                "start_latitude": 37.808631,
+                "start_longitude": -122.415511,
+                "end_latitude": 37.808477,
+                "end_longitude": -122.409571,
+                "climb_category": 0,
+                "city": "San Francisco",
+                "state": "California",
+                "country": "United States",
+                "private": false,
+                "hazardous": false,
+                "starred": false
+            },
+            "pr_rank": null,
+            "achievements": [],
+            "kom_rank": null,
+            "hidden": false
+        },
+        {
+            "id": 2694548871362176511,
+            "resource_state": 2,
+            "name": "Pier 35 to Pier 9",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 337,
+            "moving_time": 337,
+            "start_date": "2020-05-10T19:18:08Z",
+            "start_date_local": "2020-05-10T12:18:08Z",
+            "distance": 1099.27,
+            "start_index": 1048,
+            "end_index": 1379,
+            "average_cadence": 86.2,
+            "average_heartrate": 138.2,
+            "max_heartrate": 141.0,
+            "segment": {
+                "id": 1023928,
+                "resource_state": 2,
+                "name": "Pier 35 to Pier 9",
+                "activity_type": "Run",
+                "distance": 1099.27,
+                "average_grade": -0.1,
+                "maximum_grade": 3.1,
+                "elevation_high": 2.5,
+                "elevation_low": 1.1,
+                "start_latlng": [
+                    37.807083,
+                    -122.406265
+                ],
+                "end_latlng": [
+                    37.7999,
+                    -122.398
+                ],
+                "start_latitude": 37.807083,
+                "start_longitude": -122.406265,
+                "end_latitude": 37.7999,
+                "end_longitude": -122.398,
+                "climb_category": 0,
+                "city": "San Francisco",
+                "state": "CA",
+                "country": "United States",
+                "private": false,
+                "hazardous": false,
+                "starred": false
+            },
+            "pr_rank": null,
+            "achievements": [],
+            "kom_rank": null,
+            "hidden": false
+        },
+        {
+            "id": 2694548871362176989,
+            "resource_state": 2,
+            "name": "Aquatic Park to Ferry Building",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 926,
+            "moving_time": 926,
+            "start_date": "2020-05-10T19:10:59Z",
+            "start_date_local": "2020-05-10T12:10:59Z",
+            "distance": 2930.7,
+            "start_index": 631,
+            "end_index": 1536,
+            "average_cadence": 86.1,
+            "average_heartrate": 137.6,
+            "max_heartrate": 143.0,
+            "segment": {
+                "id": 18766734,
+                "resource_state": 2,
+                "name": "Aquatic Park to Ferry Building",
+                "activity_type": "Run",
+                "distance": 2930.7,
+                "average_grade": 0.0,
+                "maximum_grade": 6.7,
+                "elevation_high": 3.6,
+                "elevation_low": 0.9,
+                "start_latlng": [
+                    37.807631,
+                    -122.420708
+                ],
+                "end_latlng": [
+                    37.796167,
+                    -122.394563
+                ],
+                "start_latitude": 37.807631,
+                "start_longitude": -122.420708,
+                "end_latitude": 37.796167,
+                "end_longitude": -122.394563,
+                "climb_category": 0,
+                "city": "San Francisco",
+                "state": "California",
+                "country": "United States",
+                "private": false,
+                "hazardous": false,
+                "starred": false
+            },
+            "pr_rank": null,
+            "achievements": [],
+            "kom_rank": null,
+            "hidden": false
+        },
+        {
+            "id": 2694548871362177107,
+            "resource_state": 2,
+            "name": "Brooks Best Fest San Francisco",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 593,
+            "moving_time": 593,
+            "start_date": "2020-05-10T19:16:36Z",
+            "start_date_local": "2020-05-10T12:16:36Z",
+            "distance": 1906.9,
+            "start_index": 958,
+            "end_index": 1539,
+            "average_cadence": 86.1,
+            "average_heartrate": 138.8,
+            "max_heartrate": 143.0,
+            "segment": {
+                "id": 21321647,
+                "resource_state": 2,
+                "name": "Brooks Best Fest San Francisco",
+                "activity_type": "Run",
+                "distance": 1906.9,
+                "average_grade": -0.0,
+                "maximum_grade": 0.1,
+                "elevation_high": 3.8,
+                "elevation_low": 2.7,
+                "start_latlng": [
+                    37.8083,
+                    -122.40912
+                ],
+                "end_latlng": [
+                    37.79608,
+                    -122.39446
+                ],
+                "start_latitude": 37.8083,
+                "start_longitude": -122.40912,
+                "end_latitude": 37.79608,
+                "end_longitude": -122.39446,
+                "climb_category": 0,
+                "city": "San Francisco",
+                "state": "California",
+                "country": "United States",
+                "private": false,
+                "hazardous": false,
+                "starred": false
+            },
+            "pr_rank": null,
+            "achievements": [],
+            "kom_rank": null,
+            "hidden": false
+        },
+        {
+            "id": 2694548871362177217,
+            "resource_state": 2,
+            "name": "Levi's Plaza - Ferry Building",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 321,
+            "moving_time": 321,
+            "start_date": "2020-05-10T19:21:24Z",
+            "start_date_local": "2020-05-10T12:21:24Z",
+            "distance": 1053.6,
+            "start_index": 1241,
+            "end_index": 1554,
+            "average_cadence": 85.9,
+            "average_heartrate": 139.4,
+            "max_heartrate": 144.0,
+            "segment": {
+                "id": 13242671,
+                "resource_state": 2,
+                "name": "Levi's Plaza - Ferry Building",
+                "activity_type": "Run",
+                "distance": 1053.6,
+                "average_grade": 0.2,
+                "maximum_grade": 2.7,
+                "elevation_high": 3.0,
+                "elevation_low": 1.1,
+                "start_latlng": [
+                    37.803276,
+                    -122.400962
+                ],
+                "end_latlng": [
+                    37.79568,
+                    -122.394061
+                ],
+                "start_latitude": 37.803276,
+                "start_longitude": -122.400962,
+                "end_latitude": 37.79568,
+                "end_longitude": -122.394061,
+                "climb_category": 0,
+                "city": "San Francisco",
+                "state": "California",
+                "country": "United States",
+                "private": false,
+                "hazardous": false,
+                "starred": false
+            },
+            "pr_rank": null,
+            "achievements": [],
+            "kom_rank": null,
+            "hidden": false
+        },
+        {
+            "id": 2694548871362177879,
+            "resource_state": 2,
+            "name": "Embarcadero - Bay St to Bay Bridge",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 779,
+            "moving_time": 779,
+            "start_date": "2020-05-10T19:18:40Z",
+            "start_date_local": "2020-05-10T12:18:40Z",
+            "distance": 2550.6,
+            "start_index": 1079,
+            "end_index": 1838,
+            "average_cadence": 85.9,
+            "average_heartrate": 140.1,
+            "max_heartrate": 147.0,
+            "segment": {
+                "id": 3291214,
+                "resource_state": 2,
+                "name": "Embarcadero - Bay St to Bay Bridge",
+                "activity_type": "Run",
+                "distance": 2550.6,
+                "average_grade": 0.0,
+                "maximum_grade": 2.9,
+                "elevation_high": 3.7,
+                "elevation_low": 1.0,
+                "start_latlng": [
+                    37.8062455,
+                    -122.40559972
+                ],
+                "end_latlng": [
+                    37.78888236,
+                    -122.38782472
+                ],
+                "start_latitude": 37.8062455,
+                "start_longitude": -122.40559972,
+                "end_latitude": 37.78888236,
+                "end_longitude": -122.38782472,
+                "climb_category": 0,
+                "city": "San Francisco",
+                "state": "CA",
+                "country": "United States",
+                "private": false,
+                "hazardous": false,
+                "starred": false
+            },
+            "pr_rank": null,
+            "achievements": [],
+            "kom_rank": null,
+            "hidden": false
+        },
+        {
+            "id": 2694548871362178003,
+            "resource_state": 2,
+            "name": "Ferry Bldg to Bridge",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 273,
+            "moving_time": 273,
+            "start_date": "2020-05-10T19:27:06Z",
+            "start_date_local": "2020-05-10T12:27:06Z",
+            "distance": 881.7,
+            "start_index": 1575,
+            "end_index": 1838,
+            "average_cadence": 85.6,
+            "average_heartrate": 141.7,
+            "max_heartrate": 147.0,
+            "segment": {
+                "id": 16755907,
+                "resource_state": 2,
+                "name": "Ferry Bldg to Bridge",
+                "activity_type": "Run",
+                "distance": 881.7,
+                "average_grade": 0.1,
+                "maximum_grade": 2.3,
+                "elevation_high": 3.9,
+                "elevation_low": 1.9,
+                "start_latlng": [
+                    37.795173,
+                    -122.393626
+                ],
+                "end_latlng": [
+                    37.788849,
+                    -122.387929
+                ],
+                "start_latitude": 37.795173,
+                "start_longitude": -122.393626,
+                "end_latitude": 37.788849,
+                "end_longitude": -122.387929,
+                "climb_category": 0,
+                "city": "San Francisco",
+                "state": "California",
+                "country": "United States",
+                "private": false,
+                "hazardous": false,
+                "starred": false
+            },
+            "pr_rank": null,
+            "achievements": [],
+            "kom_rank": null,
+            "hidden": false
+        },
+        {
+            "id": 2694548871362178269,
+            "resource_state": 2,
+            "name": "Hi Dive 400m",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 126,
+            "moving_time": 126,
+            "start_date": "2020-05-10T19:32:18Z",
+            "start_date_local": "2020-05-10T12:32:18Z",
+            "distance": 405.0,
+            "start_index": 1876,
+            "end_index": 1998,
+            "average_cadence": 85.3,
+            "average_heartrate": 142.2,
+            "max_heartrate": 146.0,
+            "segment": {
+                "id": 20795034,
+                "resource_state": 2,
+                "name": "Hi Dive 400m",
+                "activity_type": "Run",
+                "distance": 405.0,
+                "average_grade": -0.3,
+                "maximum_grade": 0.6,
+                "elevation_high": 4.4,
+                "elevation_low": 3.3,
+                "start_latlng": [
+                    37.787731,
+                    -122.387536
+                ],
+                "end_latlng": [
+                    37.784099,
+                    -122.387849
+                ],
+                "start_latitude": 37.787731,
+                "start_longitude": -122.387536,
+                "end_latitude": 37.784099,
+                "end_longitude": -122.387849,
+                "climb_category": 0,
+                "city": null,
+                "state": null,
+                "country": null,
+                "private": false,
+                "hazardous": false,
+                "starred": false
+            },
+            "pr_rank": null,
+            "achievements": [],
+            "kom_rank": null,
+            "hidden": false
+        },
+        {
+            "id": 2694548871362178705,
+            "resource_state": 2,
+            "name": "Rocket Mile",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 476,
+            "moving_time": 476,
+            "start_date": "2020-05-10T19:28:07Z",
+            "start_date_local": "2020-05-10T12:28:07Z",
+            "distance": 1575.4,
+            "start_index": 1634,
+            "end_index": 2097,
+            "average_cadence": 85.6,
+            "average_heartrate": 142.8,
+            "max_heartrate": 150.0,
+            "segment": {
+                "id": 1554098,
+                "resource_state": 2,
+                "name": "Rocket Mile",
+                "activity_type": "Run",
+                "distance": 1575.4,
+                "average_grade": 0.1,
+                "maximum_grade": 30.0,
+                "elevation_high": 9.0,
+                "elevation_low": -9.0,
+                "start_latlng": [
+                    37.793827056919966,
+                    -122.39222162414565
+                ],
+                "end_latlng": [
+                    37.78111489493193,
+                    -122.38814047549143
+                ],
+                "start_latitude": 37.793827056919966,
+                "start_longitude": -122.39222162414565,
+                "end_latitude": 37.78111489493193,
+                "end_longitude": -122.38814047549143,
+                "climb_category": 0,
+                "city": "San Francisco",
+                "state": "CA",
+                "country": "United States",
+                "private": false,
+                "hazardous": false,
+                "starred": false
+            },
+            "pr_rank": null,
+            "achievements": [],
+            "kom_rank": null,
+            "hidden": false
+        },
+        {
+            "id": 2694548871362179071,
+            "resource_state": 2,
+            "name": "AT&T 800m Dash (Reverse)",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 221,
+            "moving_time": 221,
+            "start_date": "2020-05-10T19:35:13Z",
+            "start_date_local": "2020-05-10T12:35:13Z",
+            "distance": 765.4,
+            "start_index": 2047,
+            "end_index": 2263,
+            "average_cadence": 86.4,
+            "average_heartrate": 145.1,
+            "max_heartrate": 149.0,
+            "segment": {
+                "id": 5666323,
+                "resource_state": 2,
+                "name": "AT&T 800m Dash (Reverse)",
+                "activity_type": "Run",
+                "distance": 765.4,
+                "average_grade": 0.1,
+                "maximum_grade": 2.6,
+                "elevation_high": 4.2,
+                "elevation_low": 3.1,
+                "start_latlng": [
+                    37.782712,
+                    -122.388037
+                ],
+                "end_latlng": [
+                    37.77742,
+                    -122.390044
+                ],
+                "start_latitude": 37.782712,
+                "start_longitude": -122.388037,
+                "end_latitude": 37.77742,
+                "end_longitude": -122.390044,
+                "climb_category": 0,
+                "city": "San Francisco",
+                "state": "CA",
+                "country": "United States",
+                "private": false,
+                "hazardous": false,
+                "starred": false
+            },
+            "pr_rank": null,
+            "achievements": [],
+            "kom_rank": null,
+            "hidden": false
+        },
+        {
+            "id": 2694548871362179133,
+            "resource_state": 2,
+            "name": "Pier 23 to Ballpark",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 1042,
+            "moving_time": 1042,
+            "start_date": "2020-05-10T19:21:27Z",
+            "start_date_local": "2020-05-10T12:21:27Z",
+            "distance": 3505.79,
+            "start_index": 1244,
+            "end_index": 2259,
+            "average_cadence": 85.9,
+            "average_heartrate": 142.2,
+            "max_heartrate": 150.0,
+            "segment": {
+                "id": 2711223,
+                "resource_state": 2,
+                "name": "Pier 23 to Ballpark",
+                "activity_type": "Run",
+                "distance": 3505.79,
+                "average_grade": -0.0,
+                "maximum_grade": 9.0,
+                "elevation_high": 4.2,
+                "elevation_low": 0.0,
+                "start_latlng": [
+                    37.803214,
+                    -122.400899
+                ],
+                "end_latlng": [
+                    37.777334,
+                    -122.389792
+                ],
+                "start_latitude": 37.803214,
+                "start_longitude": -122.400899,
+                "end_latitude": 37.777334,
+                "end_longitude": -122.389792,
+                "climb_category": 0,
+                "city": "San Francisco",
+                "state": "CA",
+                "country": "United States",
+                "private": false,
+                "hazardous": false,
+                "starred": false
+            },
+            "pr_rank": null,
+            "achievements": [],
+            "kom_rank": null,
+            "hidden": false
+        },
+        {
+            "id": 2694548871362179303,
+            "resource_state": 2,
+            "name": "Bridge to Park mile",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 493,
+            "moving_time": 493,
+            "start_date": "2020-05-10T19:30:50Z",
+            "start_date_local": "2020-05-10T12:30:50Z",
+            "distance": 1638.7,
+            "start_index": 1790,
+            "end_index": 2272,
+            "average_cadence": 86.0,
+            "average_heartrate": 144.3,
+            "max_heartrate": 150.0,
+            "segment": {
+                "id": 8162603,
+                "resource_state": 2,
+                "name": "Bridge to Park mile",
+                "activity_type": "Run",
+                "distance": 1638.7,
+                "average_grade": 0.0,
+                "maximum_grade": 35.0,
+                "elevation_high": 4.1,
+                "elevation_low": 0.0,
+                "start_latlng": [
+                    37.79018,
+                    -122.388682
+                ],
+                "end_latlng": [
+                    37.777235,
+                    -122.39028
+                ],
+                "start_latitude": 37.79018,
+                "start_longitude": -122.388682,
+                "end_latitude": 37.777235,
+                "end_longitude": -122.39028,
+                "climb_category": 0,
+                "city": "San Francisco",
+                "state": "California",
+                "country": "United States",
+                "private": false,
+                "hazardous": false,
+                "starred": false
+            },
+            "pr_rank": null,
+            "achievements": [],
+            "kom_rank": null,
+            "hidden": false
+        },
+        {
+            "id": 2694548871362179409,
+            "resource_state": 2,
+            "name": "Me and JP 400m",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 130,
+            "moving_time": 130,
+            "start_date": "2020-05-10T19:41:02Z",
+            "start_date_local": "2020-05-10T12:41:02Z",
+            "distance": 422.6,
+            "start_index": 2387,
+            "end_index": 2512,
+            "average_cadence": 86.4,
+            "average_heartrate": 145.3,
+            "max_heartrate": 148.0,
+            "segment": {
+                "id": 5873139,
+                "resource_state": 2,
+                "name": "Me and JP 400m",
+                "activity_type": "Run",
+                "distance": 422.6,
+                "average_grade": -0.0,
+                "maximum_grade": 0.4,
+                "elevation_high": 3.4,
+                "elevation_low": 2.9,
+                "start_latlng": [
+                    37.77609,
+                    -122.387654
+                ],
+                "end_latlng": [
+                    37.77231,
+                    -122.386899
+                ],
+                "start_latitude": 37.77609,
+                "start_longitude": -122.387654,
+                "end_latitude": 37.77231,
+                "end_longitude": -122.386899,
+                "climb_category": 0,
+                "city": "San Francisco",
+                "state": "CA",
+                "country": "United States",
+                "private": false,
+                "hazardous": false,
+                "starred": false
+            },
+            "pr_rank": 3,
+            "achievements": [
+                {
+                    "type_id": 3,
+                    "type": "pr",
+                    "rank": 3
+                }
+            ],
+            "kom_rank": null,
+            "hidden": false
+        },
+        {
+            "id": 2694548871362179459,
+            "resource_state": 2,
+            "name": "mission bay strut",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 241,
+            "moving_time": 241,
+            "start_date": "2020-05-10T19:40:53Z",
+            "start_date_local": "2020-05-10T12:40:53Z",
+            "distance": 783.0,
+            "start_index": 2378,
+            "end_index": 2609,
+            "average_cadence": 86.5,
+            "average_heartrate": 145.4,
+            "max_heartrate": 148.0,
+            "segment": {
+                "id": 8901736,
+                "resource_state": 2,
+                "name": "mission bay strut",
+                "activity_type": "Run",
+                "distance": 783.0,
+                "average_grade": -0.0,
+                "maximum_grade": 0.5,
+                "elevation_high": 3.5,
+                "elevation_low": 2.7,
+                "start_latlng": [
+                    37.776298,
+                    -122.387595
+                ],
+                "end_latlng": [
+                    37.769365,
+                    -122.386292
+                ],
+                "start_latitude": 37.776298,
+                "start_longitude": -122.387595,
+                "end_latitude": 37.769365,
+                "end_longitude": -122.386292,
+                "climb_category": 0,
+                "city": "San Francisco",
+                "state": "California",
+                "country": "United States",
+                "private": false,
+                "hazardous": false,
+                "starred": false
+            },
+            "pr_rank": 2,
+            "achievements": [
+                {
+                    "type_id": 3,
+                    "type": "pr",
+                    "rank": 2
+                }
+            ],
+            "kom_rank": null,
+            "hidden": false
+        },
+        {
+            "id": 2694548871362179493,
+            "resource_state": 2,
+            "name": "Oracle Park to Chase Center",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 416,
+            "moving_time": 416,
+            "start_date": "2020-05-10T19:39:14Z",
+            "start_date_local": "2020-05-10T12:39:14Z",
+            "distance": 1345.0,
+            "start_index": 2283,
+            "end_index": 2683,
+            "average_cadence": 86.1,
+            "average_heartrate": 145.1,
+            "max_heartrate": 150.0,
+            "segment": {
+                "id": 21807143,
+                "resource_state": 2,
+                "name": "Oracle Park to Chase Center",
+                "activity_type": "Run",
+                "distance": 1345.0,
+                "average_grade": 0.0,
+                "maximum_grade": 3.9,
+                "elevation_high": 3.8,
+                "elevation_low": 1.2,
+                "start_latlng": [
+                    37.777038,
+                    -122.390424
+                ],
+                "end_latlng": [
+                    37.767159,
+                    -122.386003
+                ],
+                "start_latitude": 37.777038,
+                "start_longitude": -122.390424,
+                "end_latitude": 37.767159,
+                "end_longitude": -122.386003,
+                "climb_category": 0,
+                "city": "San Francisco",
+                "state": "California",
+                "country": "United States",
+                "private": false,
+                "hazardous": false,
+                "starred": false
+            },
+            "pr_rank": 3,
+            "achievements": [
+                {
+                    "type_id": 3,
+                    "type": "pr",
+                    "rank": 3
+                }
+            ],
+            "kom_rank": null,
+            "hidden": false
+        },
+        {
+            "id": 2694548871362179615,
+            "resource_state": 2,
+            "name": "Terry Francois - Illinois to AT&T Ballpark",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 488,
+            "moving_time": 488,
+            "start_date": "2020-05-10T19:54:49Z",
+            "start_date_local": "2020-05-10T12:54:49Z",
+            "distance": 1666.72,
+            "start_index": 3135,
+            "end_index": 3612,
+            "average_cadence": 85.9,
+            "average_heartrate": 151.7,
+            "max_heartrate": 155.0,
+            "segment": {
+                "id": 1166394,
+                "resource_state": 2,
+                "name": "Terry Francois - Illinois to AT&T Ballpark",
+                "activity_type": "Run",
+                "distance": 1666.72,
+                "average_grade": -0.2,
+                "maximum_grade": 0.9,
+                "elevation_high": 3.7,
+                "elevation_low": 0.1,
+                "start_latlng": [
+                    37.764214,
+                    -122.38791
+                ],
+                "end_latlng": [
+                    37.776554,
+                    -122.389928
+                ],
+                "start_latitude": 37.764214,
+                "start_longitude": -122.38791,
+                "end_latitude": 37.776554,
+                "end_longitude": -122.389928,
+                "climb_category": 0,
+                "city": "San Francisco",
+                "state": "CA",
+                "country": "United States",
+                "private": false,
+                "hazardous": false,
+                "starred": false
+            },
+            "pr_rank": 2,
+            "achievements": [
+                {
+                    "type_id": 3,
+                    "type": "pr",
+                    "rank": 2
+                }
+            ],
+            "kom_rank": null,
+            "hidden": false
+        },
+        {
+            "id": 2694548871362179627,
+            "resource_state": 2,
+            "name": "Terry Francois Boat Club to 3rd",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 242,
+            "moving_time": 242,
+            "start_date": "2020-05-10T19:58:56Z",
+            "start_date_local": "2020-05-10T12:58:56Z",
+            "distance": 782.7,
+            "start_index": 3378,
+            "end_index": 3613,
+            "average_cadence": 85.1,
+            "average_heartrate": 152.1,
+            "max_heartrate": 155.0,
+            "segment": {
+                "id": 9531416,
+                "resource_state": 2,
+                "name": "Terry Francois Boat Club to 3rd",
+                "activity_type": "Run",
+                "distance": 782.7,
+                "average_grade": -0.4,
+                "maximum_grade": 3.5,
+                "elevation_high": 3.6,
+                "elevation_low": 0.0,
+                "start_latlng": [
+                    37.771488,
+                    -122.386468
+                ],
+                "end_latlng": [
+                    37.776528,
+                    -122.389977
+                ],
+                "start_latitude": 37.771488,
+                "start_longitude": -122.386468,
+                "end_latitude": 37.776528,
+                "end_longitude": -122.389977,
+                "climb_category": 0,
+                "city": "San Francisco",
+                "state": "California",
+                "country": "United States",
+                "private": false,
+                "hazardous": false,
+                "starred": false
+            },
+            "pr_rank": null,
+            "achievements": [],
+            "kom_rank": null,
+            "hidden": false
+        },
+        {
+            "id": 2694548871362179749,
+            "resource_state": 2,
+            "name": "Slloyd rules: Stay outside the Bricks!",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 95,
+            "moving_time": 95,
+            "start_date": "2020-05-10T20:03:23Z",
+            "start_date_local": "2020-05-10T13:03:23Z",
+            "distance": 352.8,
+            "start_index": 3638,
+            "end_index": 3727,
+            "average_cadence": 85.7,
+            "average_heartrate": 152.6,
+            "max_heartrate": 156.0,
+            "segment": {
+                "id": 8949326,
+                "resource_state": 2,
+                "name": "Slloyd rules: Stay outside the Bricks!",
+                "activity_type": "Run",
+                "distance": 352.8,
+                "average_grade": 0.0,
+                "maximum_grade": 4.9,
+                "elevation_high": 3.8,
+                "elevation_low": 0.0,
+                "start_latlng": [
+                    37.777336,
+                    -122.390649
+                ],
+                "end_latlng": [
+                    37.778818,
+                    -122.387559
+                ],
+                "start_latitude": 37.777336,
+                "start_longitude": -122.390649,
+                "end_latitude": 37.778818,
+                "end_longitude": -122.387559,
+                "climb_category": 0,
+                "city": "San Francisco",
+                "state": "California",
+                "country": "United States",
+                "private": false,
+                "hazardous": false,
+                "starred": false
+            },
+            "pr_rank": null,
+            "achievements": [],
+            "kom_rank": null,
+            "hidden": false
+        },
+        {
+            "id": 2694548871362179801,
+            "resource_state": 2,
+            "name": "San Francisco Marathon Mile 26",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 509,
+            "moving_time": 509,
+            "start_date": "2020-05-10T19:56:55Z",
+            "start_date_local": "2020-05-10T12:56:55Z",
+            "distance": 1708.3,
+            "start_index": 3259,
+            "end_index": 3752,
+            "average_cadence": 85.5,
+            "average_heartrate": 152.2,
+            "max_heartrate": 156.0,
+            "segment": {
+                "id": 12684908,
+                "resource_state": 2,
+                "name": "San Francisco Marathon Mile 26",
+                "activity_type": "Run",
+                "distance": 1708.3,
+                "average_grade": 0.0,
+                "maximum_grade": 0.3,
+                "elevation_high": 3.9,
+                "elevation_low": 2.8,
+                "start_latlng": [
+                    37.76808,
+                    -122.38553
+                ],
+                "end_latlng": [
+                    37.779617,
+                    -122.38763
+                ],
+                "start_latitude": 37.76808,
+                "start_longitude": -122.38553,
+                "end_latitude": 37.779617,
+                "end_longitude": -122.38763,
+                "climb_category": 0,
+                "city": "San Francisco",
+                "state": "California",
+                "country": "United States",
+                "private": false,
+                "hazardous": false,
+                "starred": false
+            },
+            "pr_rank": 3,
+            "achievements": [
+                {
+                    "type_id": 3,
+                    "type": "pr",
+                    "rank": 3
+                }
+            ],
+            "kom_rank": null,
+            "hidden": false
+        },
+        {
+            "id": 2694548871362179915,
+            "resource_state": 2,
+            "name": "Pier 42 to Pier 40 Beer Dash",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 94,
+            "moving_time": 94,
+            "start_date": "2020-05-10T20:04:43Z",
+            "start_date_local": "2020-05-10T13:04:43Z",
+            "distance": 318.09,
+            "start_index": 3713,
+            "end_index": 3804,
+            "average_cadence": 85.2,
+            "average_heartrate": 151.0,
+            "max_heartrate": 153.0,
+            "segment": {
+                "id": 3394958,
+                "resource_state": 2,
+                "name": "Pier 42 to Pier 40 Beer Dash",
+                "activity_type": "Run",
+                "distance": 318.09,
+                "average_grade": 0.2,
+                "maximum_grade": 0.9,
+                "elevation_high": 4.4,
+                "elevation_low": 3.5,
+                "start_latlng": [
+                    37.7783128246665,
+                    -122.38754871301353
+                ],
+                "end_latlng": [
+                    37.781130066141486,
+                    -122.38788725808263
+                ],
+                "start_latitude": 37.7783128246665,
+                "start_longitude": -122.38754871301353,
+                "end_latitude": 37.781130066141486,
+                "end_longitude": -122.38788725808263,
+                "climb_category": 0,
+                "city": "San Francisco",
+                "state": "CA",
+                "country": "United States",
+                "private": false,
+                "hazardous": false,
+                "starred": false
+            },
+            "pr_rank": null,
+            "achievements": [],
+            "kom_rank": null,
+            "hidden": false
+        },
+        {
+            "id": 2694548871362180119,
+            "resource_state": 2,
+            "name": "AT&T 800m Dash",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 232,
+            "moving_time": 232,
+            "start_date": "2020-05-10T20:03:24Z",
+            "start_date_local": "2020-05-10T13:03:24Z",
+            "distance": 785.3,
+            "start_index": 3639,
+            "end_index": 3860,
+            "average_cadence": 85.3,
+            "average_heartrate": 151.4,
+            "max_heartrate": 156.0,
+            "segment": {
+                "id": 5666311,
+                "resource_state": 2,
+                "name": "AT&T 800m Dash",
+                "activity_type": "Run",
+                "distance": 785.3,
+                "average_grade": -0.0,
+                "maximum_grade": 18.1,
+                "elevation_high": 4.1,
+                "elevation_low": 0.0,
+                "start_latlng": [
+                    37.777171,
+                    -122.390329
+                ],
+                "end_latlng": [
+                    37.782742,
+                    -122.387922
+                ],
+                "start_latitude": 37.777171,
+                "start_longitude": -122.390329,
+                "end_latitude": 37.782742,
+                "end_longitude": -122.387922,
+                "climb_category": 0,
+                "city": "San Francisco",
+                "state": "CA",
+                "country": "United States",
+                "private": false,
+                "hazardous": false,
+                "starred": false
+            },
+            "pr_rank": null,
+            "achievements": [],
+            "kom_rank": null,
+            "hidden": false
+        },
+        {
+            "id": 2694548871362180179,
+            "resource_state": 2,
+            "name": "Hi Dive 400m reverse",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 119,
+            "moving_time": 119,
+            "start_date": "2020-05-10T20:07:57Z",
+            "start_date_local": "2020-05-10T13:07:57Z",
+            "distance": 403.5,
+            "start_index": 3899,
+            "end_index": 4016,
+            "average_cadence": 84.9,
+            "average_heartrate": 153.4,
+            "max_heartrate": 156.0,
+            "segment": {
+                "id": 20795174,
+                "resource_state": 2,
+                "name": "Hi Dive 400m reverse",
+                "activity_type": "Run",
+                "distance": 403.5,
+                "average_grade": 0.3,
+                "maximum_grade": 3.1,
+                "elevation_high": 4.4,
+                "elevation_low": 3.3,
+                "start_latlng": [
+                    37.784098,
+                    -122.387868
+                ],
+                "end_latlng": [
+                    37.78772,
+                    -122.387626
+                ],
+                "start_latitude": 37.784098,
+                "start_longitude": -122.387868,
+                "end_latitude": 37.78772,
+                "end_longitude": -122.387626,
+                "climb_category": 0,
+                "city": "San Francisco",
+                "state": "California",
+                "country": "United States",
+                "private": false,
+                "hazardous": false,
+                "starred": false
+            },
+            "pr_rank": null,
+            "achievements": [],
+            "kom_rank": null,
+            "hidden": false
+        },
+        {
+            "id": 2694548871362180335,
+            "resource_state": 2,
+            "name": "South Beach Northbound",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 260,
+            "moving_time": 260,
+            "start_date": "2020-05-10T20:06:24Z",
+            "start_date_local": "2020-05-10T13:06:24Z",
+            "distance": 866.7,
+            "start_index": 3811,
+            "end_index": 4061,
+            "average_cadence": 85.0,
+            "average_heartrate": 152.1,
+            "max_heartrate": 156.0,
+            "segment": {
+                "id": 17549200,
+                "resource_state": 2,
+                "name": "South Beach Northbound",
+                "activity_type": "Run",
+                "distance": 866.7,
+                "average_grade": 0.0,
+                "maximum_grade": 0.7,
+                "elevation_high": 5.4,
+                "elevation_low": 4.6,
+                "start_latlng": [
+                    37.781333,
+                    -122.387882
+                ],
+                "end_latlng": [
+                    37.789057,
+                    -122.387994
+                ],
+                "start_latitude": 37.781333,
+                "start_longitude": -122.387882,
+                "end_latitude": 37.789057,
+                "end_longitude": -122.387994,
+                "climb_category": 0,
+                "city": "San Francisco",
+                "state": "California",
+                "country": "United States",
+                "private": false,
+                "hazardous": false,
+                "starred": false
+            },
+            "pr_rank": null,
+            "achievements": [],
+            "kom_rank": null,
+            "hidden": false
+        },
+        {
+            "id": 2694548871362180413,
+            "resource_state": 2,
+            "name": "Mile By the Bay ",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 508,
+            "moving_time": 508,
+            "start_date": "2020-05-10T20:03:49Z",
+            "start_date_local": "2020-05-10T13:03:49Z",
+            "distance": 1689.36,
+            "start_index": 3663,
+            "end_index": 4153,
+            "average_cadence": 85.2,
+            "average_heartrate": 152.1,
+            "max_heartrate": 156.0,
+            "segment": {
+                "id": 2552268,
+                "resource_state": 2,
+                "name": "Mile By the Bay ",
+                "activity_type": "Run",
+                "distance": 1689.36,
+                "average_grade": -0.0,
+                "maximum_grade": 0.6,
+                "elevation_high": 4.2,
+                "elevation_low": 3.0,
+                "start_latlng": [
+                    37.777588460594416,
+                    -122.38948199898005
+                ],
+                "end_latlng": [
+                    37.79156947508454,
+                    -122.38967721350491
+                ],
+                "start_latitude": 37.777588460594416,
+                "start_longitude": -122.38948199898005,
+                "end_latitude": 37.79156947508454,
+                "end_longitude": -122.38967721350491,
+                "climb_category": 0,
+                "city": "San Francisco",
+                "state": "CA",
+                "country": "United States",
+                "private": false,
+                "hazardous": false,
+                "starred": false
+            },
+            "pr_rank": 3,
+            "achievements": [
+                {
+                    "type_id": 3,
+                    "type": "pr",
+                    "rank": 3
+                }
+            ],
+            "kom_rank": null,
+            "hidden": false
+        },
+        {
+            "id": 2694548871362180525,
+            "resource_state": 2,
+            "name": "Rincom to Pier",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 266,
+            "moving_time": 266,
+            "start_date": "2020-05-10T20:10:02Z",
+            "start_date_local": "2020-05-10T13:10:02Z",
+            "distance": 900.3,
+            "start_index": 4021,
+            "end_index": 4279,
+            "average_cadence": 85.4,
+            "average_heartrate": 154.2,
+            "max_heartrate": 159.0,
+            "segment": {
+                "id": 17549207,
+                "resource_state": 2,
+                "name": "Rincom to Pier",
+                "activity_type": "Run",
+                "distance": 900.3,
+                "average_grade": -0.0,
+                "maximum_grade": 1.2,
+                "elevation_high": 5.4,
+                "elevation_low": 3.8,
+                "start_latlng": [
+                    37.787907,
+                    -122.387601
+                ],
+                "end_latlng": [
+                    37.794546,
+                    -122.393057
+                ],
+                "start_latitude": 37.787907,
+                "start_longitude": -122.387601,
+                "end_latitude": 37.794546,
+                "end_longitude": -122.393057,
+                "climb_category": 0,
+                "city": "San Francisco",
+                "state": "California",
+                "country": "United States",
+                "private": false,
+                "hazardous": false,
+                "starred": false
+            },
+            "pr_rank": null,
+            "achievements": [],
+            "kom_rank": null,
+            "hidden": false
+        },
+        {
+            "id": 2694548871362180721,
+            "resource_state": 2,
+            "name": "south beach speed mile",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 502,
+            "moving_time": 502,
+            "start_date": "2020-05-10T20:06:31Z",
+            "start_date_local": "2020-05-10T13:06:31Z",
+            "distance": 1657.4,
+            "start_index": 3818,
+            "end_index": 4303,
+            "average_cadence": 85.2,
+            "average_heartrate": 153.3,
+            "max_heartrate": 159.0,
+            "segment": {
+                "id": 4878224,
+                "resource_state": 2,
+                "name": "south beach speed mile",
+                "activity_type": "Run",
+                "distance": 1657.4,
+                "average_grade": -0.0,
+                "maximum_grade": 0.8,
+                "elevation_high": 3.9,
+                "elevation_low": 2.4,
+                "start_latlng": [
+                    37.78152,
+                    -122.388018
+                ],
+                "end_latlng": [
+                    37.795105,
+                    -122.393717
+                ],
+                "start_latitude": 37.78152,
+                "start_longitude": -122.388018,
+                "end_latitude": 37.795105,
+                "end_longitude": -122.393717,
+                "climb_category": 0,
+                "city": "San Francisco",
+                "state": "CA",
+                "country": "United States",
+                "private": false,
+                "hazardous": false,
+                "starred": false
+            },
+            "pr_rank": null,
+            "achievements": [],
+            "kom_rank": null,
+            "hidden": false
+        },
+        {
+            "id": 2694548871362180789,
+            "resource_state": 2,
+            "name": "Pier 40 to Pier 32",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 821,
+            "moving_time": 821,
+            "start_date": "2020-05-10T20:06:40Z",
+            "start_date_local": "2020-05-10T13:06:40Z",
+            "distance": 2783.78,
+            "start_index": 3826,
+            "end_index": 4616,
+            "average_cadence": 85.5,
+            "average_heartrate": 154.9,
+            "max_heartrate": 160.0,
+            "segment": {
+                "id": 2309261,
+                "resource_state": 2,
+                "name": "Pier 40 to Pier 32",
+                "activity_type": "Run",
+                "distance": 2783.78,
+                "average_grade": -0.1,
+                "maximum_grade": 4.4,
+                "elevation_high": 3.8,
+                "elevation_low": 0.0,
+                "start_latlng": [
+                    37.781788,
+                    -122.3880065
+                ],
+                "end_latlng": [
+                    37.8032352,
+                    -122.4009819
+                ],
+                "start_latitude": 37.781788,
+                "start_longitude": -122.3880065,
+                "end_latitude": 37.8032352,
+                "end_longitude": -122.4009819,
+                "climb_category": 0,
+                "city": "San Francisco",
+                "state": "CA",
+                "country": "United States",
+                "private": false,
+                "hazardous": false,
+                "starred": false
+            },
+            "pr_rank": null,
+            "achievements": [],
+            "kom_rank": null,
+            "hidden": false
+        },
+        {
+            "id": 2694548871362180961,
+            "resource_state": 2,
+            "name": "Pier 31",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 37,
+            "moving_time": 37,
+            "start_date": "2020-05-10T20:23:25Z",
+            "start_date_local": "2020-05-10T13:23:25Z",
+            "distance": 121.2,
+            "start_index": 4695,
+            "end_index": 4731,
+            "average_cadence": 85.4,
+            "average_heartrate": 154.0,
+            "max_heartrate": 156.0,
+            "segment": {
+                "id": 22050555,
+                "resource_state": 2,
+                "name": "Pier 31",
+                "activity_type": "Run",
+                "distance": 121.2,
+                "average_grade": 0.0,
+                "maximum_grade": 0.3,
+                "elevation_high": 3.5,
+                "elevation_low": 3.2,
+                "start_latlng": [
+                    37.805245,
+                    -122.403302
+                ],
+                "end_latlng": [
+                    37.805932,
+                    -122.404374
+                ],
+                "start_latitude": 37.805245,
+                "start_longitude": -122.403302,
+                "end_latitude": 37.805932,
+                "end_longitude": -122.404374,
+                "climb_category": 0,
+                "city": "San Francisco",
+                "state": "California",
+                "country": "United States",
+                "private": false,
+                "hazardous": false,
+                "starred": false
+            },
+            "pr_rank": null,
+            "achievements": [],
+            "kom_rank": null,
+            "hidden": false
+        },
+        {
+            "id": 2694548871362181057,
+            "resource_state": 2,
+            "name": "Bay Bridge to Pier 39 Flags",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 878,
+            "moving_time": 774,
+            "start_date": "2020-05-10T20:10:48Z",
+            "start_date_local": "2020-05-10T13:10:48Z",
+            "distance": 2653.1,
+            "start_index": 4065,
+            "end_index": 4813,
+            "average_cadence": 85.7,
+            "average_heartrate": 154.6,
+            "max_heartrate": 160.0,
+            "segment": {
+                "id": 18257807,
+                "resource_state": 2,
+                "name": "Bay Bridge to Pier 39 Flags",
+                "activity_type": "Run",
+                "distance": 2653.1,
+                "average_grade": -0.0,
+                "maximum_grade": 6.6,
+                "elevation_high": -24.0,
+                "elevation_low": -27.6,
+                "start_latlng": [
+                    37.789117,
+                    -122.388106
+                ],
+                "end_latlng": [
+                    37.807397,
+                    -122.406823
+                ],
+                "start_latitude": 37.789117,
+                "start_longitude": -122.388106,
+                "end_latitude": 37.807397,
+                "end_longitude": -122.406823,
+                "climb_category": 0,
+                "city": "San Francisco",
+                "state": "California",
+                "country": "United States",
+                "private": false,
+                "hazardous": false,
+                "starred": false
+            },
+            "pr_rank": null,
+            "achievements": [],
+            "kom_rank": null,
+            "hidden": false
+        },
+        {
+            "id": 2694548871362181297,
+            "resource_state": 2,
+            "name": "Embarcadero: Alcatraz to Powell St.",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 702,
+            "moving_time": 598,
+            "start_date": "2020-05-10T20:16:20Z",
+            "start_date_local": "2020-05-10T13:16:20Z",
+            "distance": 1955.4,
+            "start_index": 4386,
+            "end_index": 4965,
+            "average_cadence": 85.6,
+            "average_heartrate": 154.5,
+            "max_heartrate": 160.0,
+            "segment": {
+                "id": 8670326,
+                "resource_state": 2,
+                "name": "Embarcadero: Alcatraz to Powell St.",
+                "activity_type": "Run",
+                "distance": 1955.4,
+                "average_grade": -0.0,
+                "maximum_grade": 3.4,
+                "elevation_high": 3.0,
+                "elevation_low": 1.1,
+                "start_latlng": [
+                    37.79734,
+                    -122.395696
+                ],
+                "end_latlng": [
+                    37.808682,
+                    -122.412354
+                ],
+                "start_latitude": 37.79734,
+                "start_longitude": -122.395696,
+                "end_latitude": 37.808682,
+                "end_longitude": -122.412354,
+                "climb_category": 0,
+                "city": "San Francisco",
+                "state": "California",
+                "country": "United States",
+                "private": false,
+                "hazardous": false,
+                "starred": false
+            },
+            "pr_rank": null,
+            "achievements": [],
+            "kom_rank": null,
+            "hidden": false
+        },
+        {
+            "id": 2694548871362181447,
+            "resource_state": 2,
+            "name": "Inter Musee Mécanique ",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 367,
+            "moving_time": 367,
+            "start_date": "2020-05-10T20:23:15Z",
+            "start_date_local": "2020-05-10T13:23:15Z",
+            "distance": 1213.8,
+            "start_index": 4685,
+            "end_index": 5042,
+            "average_cadence": 85.3,
+            "average_heartrate": 155.1,
+            "max_heartrate": 160.0,
+            "segment": {
+                "id": 17553844,
+                "resource_state": 2,
+                "name": "Inter Musee Mécanique ",
+                "activity_type": "Run",
+                "distance": 1213.8,
+                "average_grade": -0.1,
+                "maximum_grade": 0.7,
+                "elevation_high": 4.2,
+                "elevation_low": 1.6,
+                "start_latlng": [
+                    37.805041,
+                    -122.402945
+                ],
+                "end_latlng": [
+                    37.809034,
+                    -122.415318
+                ],
+                "start_latitude": 37.805041,
+                "start_longitude": -122.402945,
+                "end_latitude": 37.809034,
+                "end_longitude": -122.415318,
+                "climb_category": 0,
+                "city": "San Francisco",
+                "state": "California",
+                "country": "United States",
+                "private": false,
+                "hazardous": false,
+                "starred": false
+            },
+            "pr_rank": null,
+            "achievements": [],
+            "kom_rank": null,
+            "hidden": false
+        },
+        {
+            "id": 2694548871362181577,
+            "resource_state": 2,
+            "name": "Embarcadero: Folsom to Hyde",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 1195,
+            "moving_time": 1091,
+            "start_date": "2020-05-10T20:12:10Z",
+            "start_date_local": "2020-05-10T13:12:10Z",
+            "distance": 3632.8,
+            "start_index": 4146,
+            "end_index": 5200,
+            "average_cadence": 85.6,
+            "average_heartrate": 155.5,
+            "max_heartrate": 163.0,
+            "segment": {
+                "id": 6641729,
+                "resource_state": 2,
+                "name": "Embarcadero: Folsom to Hyde",
+                "activity_type": "Run",
+                "distance": 3632.8,
+                "average_grade": 0.0,
+                "maximum_grade": 2.8,
+                "elevation_high": 3.6,
+                "elevation_low": 1.0,
+                "start_latlng": [
+                    37.791106,
+                    -122.390025
+                ],
+                "end_latlng": [
+                    37.807577,
+                    -122.420649
+                ],
+                "start_latitude": 37.791106,
+                "start_longitude": -122.390025,
+                "end_latitude": 37.807577,
+                "end_longitude": -122.420649,
+                "climb_category": 0,
+                "city": "San Francisco",
+                "state": "CA",
+                "country": "United States",
+                "private": false,
+                "hazardous": false,
+                "starred": false
+            },
+            "pr_rank": null,
+            "achievements": [],
+            "kom_rank": null,
+            "hidden": false
+        },
+        {
+            "id": 2694548871362181751,
+            "resource_state": 2,
+            "name": "Fisherman's Wharf",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 358,
+            "moving_time": 358,
+            "start_date": "2020-05-10T20:26:40Z",
+            "start_date_local": "2020-05-10T13:26:40Z",
+            "distance": 1120.1,
+            "start_index": 4884,
+            "end_index": 5229,
+            "average_cadence": 85.2,
+            "average_heartrate": 157.5,
+            "max_heartrate": 163.0,
+            "segment": {
+                "id": 12720071,
+                "resource_state": 2,
+                "name": "Fisherman's Wharf",
+                "activity_type": "Run",
+                "distance": 1120.1,
+                "average_grade": 0.1,
+                "maximum_grade": 0.5,
+                "elevation_high": 3.4,
+                "elevation_low": 1.4,
+                "start_latlng": [
+                    37.80828,
+                    -122.4093
+                ],
+                "end_latlng": [
+                    37.80746,
+                    -122.42185
+                ],
+                "start_latitude": 37.80828,
+                "start_longitude": -122.4093,
+                "end_latitude": 37.80746,
+                "end_longitude": -122.42185,
+                "climb_category": 0,
+                "city": "San Francisco",
+                "state": "California",
+                "country": "United States",
+                "private": false,
+                "hazardous": false,
+                "starred": false
+            },
+            "pr_rank": null,
+            "achievements": [],
+            "kom_rank": null,
+            "hidden": false
+        },
+        {
+            "id": 2694548871362181791,
+            "resource_state": 2,
+            "name": "Gashouse Cove Tailwind",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 112,
+            "moving_time": 112,
+            "start_date": "2020-05-10T20:35:29Z",
+            "start_date_local": "2020-05-10T13:35:29Z",
+            "distance": 384.9,
+            "start_index": 5394,
+            "end_index": 5503,
+            "average_cadence": 85.5,
+            "average_heartrate": 154.3,
+            "max_heartrate": 159.0,
+            "segment": {
+                "id": 5051104,
+                "resource_state": 2,
+                "name": "Gashouse Cove Tailwind",
+                "activity_type": "Run",
+                "distance": 384.9,
+                "average_grade": -0.2,
+                "maximum_grade": 0.0,
+                "elevation_high": 0.6,
+                "elevation_low": 0.0,
+                "start_latlng": [
+                    37.808237,
+                    -122.42656
+                ],
+                "end_latlng": [
+                    37.810694,
+                    -122.42469
+                ],
+                "start_latitude": 37.808237,
+                "start_longitude": -122.42656,
+                "end_latitude": 37.810694,
+                "end_longitude": -122.42469,
+                "climb_category": 0,
+                "city": "San Francisco",
+                "state": "CA",
+                "country": "United States",
+                "private": false,
+                "hazardous": false,
+                "starred": false
+            },
+            "pr_rank": 1,
+            "achievements": [
+                {
+                    "type_id": 3,
+                    "type": "pr",
+                    "rank": 1
+                }
+            ],
+            "kom_rank": null,
+            "hidden": false
+        },
+        {
+            "id": 2694548871362181825,
+            "resource_state": 2,
+            "name": "Third to Maritime Pier End",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 2034,
+            "moving_time": 1930,
+            "start_date": "2020-05-10T20:03:30Z",
+            "start_date_local": "2020-05-10T13:03:30Z",
+            "distance": 6522.2,
+            "start_index": 3645,
+            "end_index": 5506,
+            "average_cadence": 85.4,
+            "average_heartrate": 154.6,
+            "max_heartrate": 163.0,
+            "segment": {
+                "id": 5329340,
+                "resource_state": 2,
+                "name": "Third to Maritime Pier End",
+                "activity_type": "Run",
+                "distance": 6522.2,
+                "average_grade": 0.0,
+                "maximum_grade": 14.6,
+                "elevation_high": 4.0,
+                "elevation_low": 0.0,
+                "start_latlng": [
+                    37.7772,
+                    -122.390022
+                ],
+                "end_latlng": [
+                    37.810587,
+                    -122.424647
+                ],
+                "start_latitude": 37.7772,
+                "start_longitude": -122.390022,
+                "end_latitude": 37.810587,
+                "end_longitude": -122.424647,
+                "climb_category": 0,
+                "city": "San Francisco",
+                "state": "CA",
+                "country": "United States",
+                "private": false,
+                "hazardous": false,
+                "starred": false
+            },
+            "pr_rank": null,
+            "achievements": [],
+            "kom_rank": null,
+            "hidden": false
+        },
+        {
+            "id": 2694548871362185395,
+            "resource_state": 2,
+            "name": "Gashouse Cove Pier out-and-back",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 242,
+            "moving_time": 242,
+            "start_date": "2020-05-10T20:35:35Z",
+            "start_date_local": "2020-05-10T13:35:35Z",
+            "distance": 780.35,
+            "start_index": 5400,
+            "end_index": 5637,
+            "average_cadence": 85.1,
+            "average_heartrate": 155.4,
+            "max_heartrate": 160.0,
+            "segment": {
+                "id": 639640,
+                "resource_state": 2,
+                "name": "Gashouse Cove Pier out-and-back",
+                "activity_type": "Run",
+                "distance": 780.35,
+                "average_grade": -0.5,
+                "maximum_grade": 0.0,
+                "elevation_high": 21.0,
+                "elevation_low": 17.2,
+                "start_latlng": [
+                    37.80840779654682,
+                    -122.42665682919323
+                ],
+                "end_latlng": [
+                    37.80829790979624,
+                    -122.42661324329674
+                ],
+                "start_latitude": 37.80840779654682,
+                "start_longitude": -122.42665682919323,
+                "end_latitude": 37.80829790979624,
+                "end_longitude": -122.42661324329674,
+                "climb_category": 0,
+                "city": "San Francisco",
+                "state": "CA",
+                "country": "United States",
+                "private": false,
+                "hazardous": false,
+                "starred": false
+            },
+            "pr_rank": 1,
+            "achievements": [
+                {
+                    "type_id": 3,
+                    "type": "pr",
+                    "rank": 1
+                }
+            ],
+            "kom_rank": null,
+            "hidden": false
+        },
+        {
+            "id": 2694548871362185477,
+            "resource_state": 2,
+            "name": "1:15 or Bust!",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 115,
+            "moving_time": 115,
+            "start_date": "2020-05-10T20:37:45Z",
+            "start_date_local": "2020-05-10T13:37:45Z",
+            "distance": 371.734,
+            "start_index": 5527,
+            "end_index": 5640,
+            "average_cadence": 84.9,
+            "average_heartrate": 157.2,
+            "max_heartrate": 160.0,
+            "segment": {
+                "id": 3159543,
+                "resource_state": 2,
+                "name": "1:15 or Bust!",
+                "activity_type": "Run",
+                "distance": 371.734,
+                "average_grade": 0.2,
+                "maximum_grade": 4.1,
+                "elevation_high": 0.7,
+                "elevation_low": 0.0,
+                "start_latlng": [
+                    37.810687,
+                    -122.424751
+                ],
+                "end_latlng": [
+                    37.808223,
+                    -122.426694
+                ],
+                "start_latitude": 37.810687,
+                "start_longitude": -122.424751,
+                "end_latitude": 37.808223,
+                "end_longitude": -122.426694,
+                "climb_category": 0,
+                "city": "San Francisco",
+                "state": "CA",
+                "country": "United States",
+                "private": false,
+                "hazardous": false,
+                "starred": false
+            },
+            "pr_rank": 1,
+            "achievements": [
+                {
+                    "type_id": 3,
+                    "type": "pr",
+                    "rank": 1
+                }
+            ],
+            "kom_rank": null,
+            "hidden": false
+        },
+        {
+            "id": 2694548871362185703,
+            "resource_state": 2,
+            "name": "MM Backside Hills",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 69,
+            "moving_time": 69,
+            "start_date": "2020-05-10T20:40:00Z",
+            "start_date_local": "2020-05-10T13:40:00Z",
+            "distance": 200.0,
+            "start_index": 5659,
+            "end_index": 5726,
+            "average_cadence": 83.2,
+            "average_heartrate": 166.1,
+            "max_heartrate": 172.0,
+            "segment": {
+                "id": 8979047,
+                "resource_state": 2,
+                "name": "MM Backside Hills",
+                "activity_type": "Run",
+                "distance": 200.0,
+                "average_grade": 9.5,
+                "maximum_grade": 17.3,
+                "elevation_high": 14.8,
+                "elevation_low": -4.2,
+                "start_latlng": [
+                    37.808105,
+                    -122.42737
+                ],
+                "end_latlng": [
+                    37.807352,
+                    -122.429264
+                ],
+                "start_latitude": 37.808105,
+                "start_longitude": -122.42737,
+                "end_latitude": 37.807352,
+                "end_longitude": -122.429264,
+                "climb_category": 0,
+                "city": "San Francisco",
+                "state": "California",
+                "country": "United States",
+                "private": false,
+                "hazardous": false,
+                "starred": false
+            },
+            "pr_rank": null,
+            "achievements": [],
+            "kom_rank": null,
+            "hidden": false
+        },
+        {
+            "id": 2697529182522548102,
+            "resource_state": 2,
+            "name": "Tourist Dodge 'em - East",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 277,
+            "moving_time": 277,
+            "start_date": "2020-05-10T19:10:37Z",
+            "start_date_local": "2020-05-10T12:10:37Z",
+            "distance": 811.8,
+            "start_index": 612,
+            "end_index": 878,
+            "average_cadence": 85.9,
+            "average_heartrate": 134.8,
+            "max_heartrate": 141.0,
+            "segment": {
+                "id": 24070187,
+                "resource_state": 2,
+                "name": "Tourist Dodge 'em - East",
+                "activity_type": "Run",
+                "distance": 811.8,
+                "average_grade": -0.0,
+                "maximum_grade": 0.5,
+                "elevation_high": 4.0,
+                "elevation_low": 3.3,
+                "start_latlng": [
+                    37.807518,
+                    -122.421449
+                ],
+                "end_latlng": [
+                    37.808693,
+                    -122.41238
+                ],
+                "start_latitude": 37.807518,
+                "start_longitude": -122.421449,
+                "end_latitude": 37.808693,
+                "end_longitude": -122.41238,
+                "climb_category": 0,
+                "city": "San Francisco",
+                "state": "California",
+                "country": "United States",
+                "private": false,
+                "hazardous": false,
+                "starred": false
+            },
+            "pr_rank": null,
+            "achievements": [],
+            "kom_rank": null,
+            "hidden": false
+        }
+    ],
+    "splits_metric": [
+        {
+            "distance": 1611.6,
+            "elapsed_time": 514,
+            "elevation_difference": -45.8,
+            "moving_time": 514,
+            "split": 1,
+            "average_speed": 3.14,
+            "average_grade_adjusted_speed": 3.05,
+            "average_heartrate": 128.5591836734694,
+            "pace_zone": 2
+        },
+        {
+            "distance": 1607.3,
+            "elapsed_time": 496,
+            "elevation_difference": -17.0,
+            "moving_time": 496,
+            "split": 2,
+            "average_speed": 3.24,
+            "average_grade_adjusted_speed": 3.23,
+            "average_heartrate": 132.80730223123732,
+            "pace_zone": 2
+        },
+        {
+            "distance": 1611.3,
+            "elapsed_time": 499,
+            "elevation_difference": 0.2,
+            "moving_time": 499,
+            "split": 3,
+            "average_speed": 3.23,
+            "average_grade_adjusted_speed": 3.25,
+            "average_heartrate": 138.55911823647295,
+            "pace_zone": 2
+        },
+        {
+            "distance": 1607.4,
+            "elapsed_time": 496,
+            "elevation_difference": 2.4,
+            "moving_time": 496,
+            "split": 4,
+            "average_speed": 3.24,
+            "average_grade_adjusted_speed": 3.27,
+            "average_heartrate": 142.17943548387098,
+            "pace_zone": 2
+        },
+        {
+            "distance": 1612.2,
+            "elapsed_time": 496,
+            "elevation_difference": -1.4,
+            "moving_time": 496,
+            "split": 5,
+            "average_speed": 3.25,
+            "average_grade_adjusted_speed": 3.28,
+            "average_heartrate": 144.05040322580646,
+            "pace_zone": 2
+        },
+        {
+            "distance": 1608.2,
+            "elapsed_time": 554,
+            "elevation_difference": 6.0,
+            "moving_time": 500,
+            "split": 6,
+            "average_speed": 3.22,
+            "average_grade_adjusted_speed": 3.29,
+            "average_heartrate": 143.504,
+            "pace_zone": 2
+        },
+        {
+            "distance": 1609.7,
+            "elapsed_time": 490,
+            "elevation_difference": -6.0,
+            "moving_time": 490,
+            "split": 7,
+            "average_speed": 3.29,
+            "average_grade_adjusted_speed": 3.28,
+            "average_heartrate": 148.0020618556701,
+            "pace_zone": 2
+        },
+        {
+            "distance": 1607.2,
+            "elapsed_time": 483,
+            "elevation_difference": 0.8,
+            "moving_time": 483,
+            "split": 8,
+            "average_speed": 3.33,
+            "average_grade_adjusted_speed": 3.37,
+            "average_heartrate": 151.6832298136646,
+            "pace_zone": 2
+        },
+        {
+            "distance": 1612.6,
+            "elapsed_time": 473,
+            "elevation_difference": -1.2,
+            "moving_time": 473,
+            "split": 9,
+            "average_speed": 3.41,
+            "average_grade_adjusted_speed": 3.42,
+            "average_heartrate": 153.78858350951373,
+            "pace_zone": 2
+        },
+        {
+            "distance": 1607.7,
+            "elapsed_time": 578,
+            "elevation_difference": 1.2,
+            "moving_time": 474,
+            "split": 10,
+            "average_speed": 3.39,
+            "average_grade_adjusted_speed": 3.46,
+            "average_heartrate": 154.44303797468353,
+            "pace_zone": 3
+        },
+        {
+            "distance": 1610.1,
+            "elapsed_time": 484,
+            "elevation_difference": -1.2,
+            "moving_time": 484,
+            "split": 11,
+            "average_speed": 3.33,
+            "average_grade_adjusted_speed": 3.37,
+            "average_heartrate": 156.79752066115702,
+            "pace_zone": 2
+        },
+        {
+            "distance": 1607.8,
+            "elapsed_time": 496,
+            "elevation_difference": 17.0,
+            "moving_time": 496,
+            "split": 12,
+            "average_speed": 3.24,
+            "average_grade_adjusted_speed": 3.48,
+            "average_heartrate": 157.0826612903226,
+            "pace_zone": 3
+        },
+        {
+            "distance": 7.7,
+            "elapsed_time": 4,
+            "elevation_difference": 1.2,
+            "moving_time": 4,
+            "split": 13,
+            "average_speed": 1.93,
+            "average_grade_adjusted_speed": 3.3,
+            "average_heartrate": 171.75,
+            "pace_zone": 2
+        }
+    ],
+    "splits_standard": [
+        {
+            "distance": 1611.6,
+            "elapsed_time": 514,
+            "elevation_difference": -45.8,
+            "moving_time": 514,
+            "split": 1,
+            "average_speed": 3.14,
+            "average_grade_adjusted_speed": 3.05,
+            "average_heartrate": 128.5591836734694,
+            "pace_zone": 2
+        },
+        {
+            "distance": 1607.3,
+            "elapsed_time": 496,
+            "elevation_difference": -17.0,
+            "moving_time": 496,
+            "split": 2,
+            "average_speed": 3.24,
+            "average_grade_adjusted_speed": 3.23,
+            "average_heartrate": 132.80730223123732,
+            "pace_zone": 2
+        },
+        {
+            "distance": 1611.3,
+            "elapsed_time": 499,
+            "elevation_difference": 0.2,
+            "moving_time": 499,
+            "split": 3,
+            "average_speed": 3.23,
+            "average_grade_adjusted_speed": 3.25,
+            "average_heartrate": 138.55911823647295,
+            "pace_zone": 2
+        },
+        {
+            "distance": 1607.4,
+            "elapsed_time": 496,
+            "elevation_difference": 2.4,
+            "moving_time": 496,
+            "split": 4,
+            "average_speed": 3.24,
+            "average_grade_adjusted_speed": 3.27,
+            "average_heartrate": 142.17943548387098,
+            "pace_zone": 2
+        },
+        {
+            "distance": 1612.2,
+            "elapsed_time": 496,
+            "elevation_difference": -1.4,
+            "moving_time": 496,
+            "split": 5,
+            "average_speed": 3.25,
+            "average_grade_adjusted_speed": 3.28,
+            "average_heartrate": 144.05040322580646,
+            "pace_zone": 2
+        },
+        {
+            "distance": 1608.2,
+            "elapsed_time": 554,
+            "elevation_difference": 6.0,
+            "moving_time": 500,
+            "split": 6,
+            "average_speed": 3.22,
+            "average_grade_adjusted_speed": 3.29,
+            "average_heartrate": 143.504,
+            "pace_zone": 2
+        },
+        {
+            "distance": 1609.7,
+            "elapsed_time": 490,
+            "elevation_difference": -6.0,
+            "moving_time": 490,
+            "split": 7,
+            "average_speed": 3.29,
+            "average_grade_adjusted_speed": 3.28,
+            "average_heartrate": 148.0020618556701,
+            "pace_zone": 2
+        },
+        {
+            "distance": 1607.2,
+            "elapsed_time": 483,
+            "elevation_difference": 0.8,
+            "moving_time": 483,
+            "split": 8,
+            "average_speed": 3.33,
+            "average_grade_adjusted_speed": 3.37,
+            "average_heartrate": 151.6832298136646,
+            "pace_zone": 2
+        },
+        {
+            "distance": 1612.6,
+            "elapsed_time": 473,
+            "elevation_difference": -1.2,
+            "moving_time": 473,
+            "split": 9,
+            "average_speed": 3.41,
+            "average_grade_adjusted_speed": 3.42,
+            "average_heartrate": 153.78858350951373,
+            "pace_zone": 2
+        },
+        {
+            "distance": 1607.7,
+            "elapsed_time": 578,
+            "elevation_difference": 1.2,
+            "moving_time": 474,
+            "split": 10,
+            "average_speed": 3.39,
+            "average_grade_adjusted_speed": 3.46,
+            "average_heartrate": 154.44303797468353,
+            "pace_zone": 3
+        },
+        {
+            "distance": 1610.1,
+            "elapsed_time": 484,
+            "elevation_difference": -1.2,
+            "moving_time": 484,
+            "split": 11,
+            "average_speed": 3.33,
+            "average_grade_adjusted_speed": 3.37,
+            "average_heartrate": 156.79752066115702,
+            "pace_zone": 2
+        },
+        {
+            "distance": 1607.8,
+            "elapsed_time": 496,
+            "elevation_difference": 17.0,
+            "moving_time": 496,
+            "split": 12,
+            "average_speed": 3.24,
+            "average_grade_adjusted_speed": 3.48,
+            "average_heartrate": 157.0826612903226,
+            "pace_zone": 3
+        },
+        {
+            "distance": 7.7,
+            "elapsed_time": 4,
+            "elevation_difference": 1.2,
+            "moving_time": 4,
+            "split": 13,
+            "average_speed": 1.93,
+            "average_grade_adjusted_speed": 3.3,
+            "average_heartrate": 171.75,
+            "pace_zone": 2
+        }
+    ],
+    "laps": [
+        {
+            "id": 11402809781,
+            "resource_state": 2,
+            "name": "Lap 1",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 514,
+            "moving_time": 514,
+            "start_date": "2020-05-10T19:00:06Z",
+            "start_date_local": "2020-05-10T12:00:06Z",
+            "distance": 1609.34,
+            "start_index": 0,
+            "end_index": 498,
+            "total_elevation_gain": 9.0,
+            "average_speed": 3.13,
+            "max_speed": 4.6,
+            "average_cadence": 86.1,
+            "average_heartrate": 128.6,
+            "max_heartrate": 140.0,
+            "lap_index": 1,
+            "split": 1,
+            "pace_zone": 2
+        },
+        {
+            "id": 11402809782,
+            "resource_state": 2,
+            "name": "Lap 2",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 496,
+            "moving_time": 496,
+            "start_date": "2020-05-10T19:08:41Z",
+            "start_date_local": "2020-05-10T12:08:41Z",
+            "distance": 1609.34,
+            "start_index": 499,
+            "end_index": 978,
+            "total_elevation_gain": 0.0,
+            "average_speed": 3.24,
+            "max_speed": 5.3,
+            "average_cadence": 85.5,
+            "average_heartrate": 132.8,
+            "max_heartrate": 141.0,
+            "lap_index": 2,
+            "split": 2,
+            "pace_zone": 2
+        },
+        {
+            "id": 11402809783,
+            "resource_state": 2,
+            "name": "Lap 3",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 498,
+            "moving_time": 498,
+            "start_date": "2020-05-10T19:16:57Z",
+            "start_date_local": "2020-05-10T12:16:57Z",
+            "distance": 1609.34,
+            "start_index": 979,
+            "end_index": 1467,
+            "total_elevation_gain": 2.0,
+            "average_speed": 3.23,
+            "max_speed": 3.7,
+            "average_cadence": 86.0,
+            "average_heartrate": 138.6,
+            "max_heartrate": 143.0,
+            "lap_index": 3,
+            "split": 3,
+            "pace_zone": 2
+        },
+        {
+            "id": 11402809784,
+            "resource_state": 2,
+            "name": "Lap 4",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 496,
+            "moving_time": 496,
+            "start_date": "2020-05-10T19:25:16Z",
+            "start_date_local": "2020-05-10T12:25:16Z",
+            "distance": 1609.34,
+            "start_index": 1468,
+            "end_index": 1947,
+            "total_elevation_gain": 2.0,
+            "average_speed": 3.24,
+            "max_speed": 3.8,
+            "average_cadence": 85.7,
+            "average_heartrate": 142.2,
+            "max_heartrate": 150.0,
+            "lap_index": 4,
+            "split": 4,
+            "pace_zone": 2
+        },
+        {
+            "id": 11402809786,
+            "resource_state": 2,
+            "name": "Lap 5",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 495,
+            "moving_time": 495,
+            "start_date": "2020-05-10T19:33:32Z",
+            "start_date_local": "2020-05-10T12:33:32Z",
+            "distance": 1609.34,
+            "start_index": 1948,
+            "end_index": 2431,
+            "total_elevation_gain": 1.0,
+            "average_speed": 3.25,
+            "max_speed": 3.9,
+            "average_cadence": 86.0,
+            "average_heartrate": 144.1,
+            "max_heartrate": 149.0,
+            "lap_index": 5,
+            "split": 5,
+            "pace_zone": 2
+        },
+        {
+            "id": 11402809787,
+            "resource_state": 2,
+            "name": "Lap 6",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 554,
+            "moving_time": 500,
+            "start_date": "2020-05-10T19:41:48Z",
+            "start_date_local": "2020-05-10T12:41:48Z",
+            "distance": 1609.34,
+            "start_index": 2432,
+            "end_index": 2914,
+            "total_elevation_gain": 8.0,
+            "average_speed": 3.22,
+            "max_speed": 4.2,
+            "average_cadence": 85.8,
+            "average_heartrate": 143.5,
+            "max_heartrate": 152.0,
+            "lap_index": 6,
+            "split": 6,
+            "pace_zone": 2
+        },
+        {
+            "id": 11402809788,
+            "resource_state": 2,
+            "name": "Lap 7",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 489,
+            "moving_time": 489,
+            "start_date": "2020-05-10T19:51:02Z",
+            "start_date_local": "2020-05-10T12:51:02Z",
+            "distance": 1609.34,
+            "start_index": 2915,
+            "end_index": 3392,
+            "total_elevation_gain": 4.0,
+            "average_speed": 3.29,
+            "max_speed": 4.0,
+            "average_cadence": 85.3,
+            "average_heartrate": 148.0,
+            "max_heartrate": 156.0,
+            "lap_index": 7,
+            "split": 7,
+            "pace_zone": 2
+        },
+        {
+            "id": 11402809789,
+            "resource_state": 2,
+            "name": "Lap 8",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 483,
+            "moving_time": 483,
+            "start_date": "2020-05-10T19:59:12Z",
+            "start_date_local": "2020-05-10T12:59:12Z",
+            "distance": 1609.34,
+            "start_index": 3393,
+            "end_index": 3858,
+            "total_elevation_gain": 1.0,
+            "average_speed": 3.33,
+            "max_speed": 3.9,
+            "average_cadence": 85.2,
+            "average_heartrate": 151.7,
+            "max_heartrate": 156.0,
+            "lap_index": 8,
+            "split": 8,
+            "pace_zone": 2
+        },
+        {
+            "id": 11402809790,
+            "resource_state": 2,
+            "name": "Lap 9",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 472,
+            "moving_time": 472,
+            "start_date": "2020-05-10T20:07:15Z",
+            "start_date_local": "2020-05-10T13:07:15Z",
+            "distance": 1609.34,
+            "start_index": 3859,
+            "end_index": 4317,
+            "total_elevation_gain": 1.0,
+            "average_speed": 3.41,
+            "max_speed": 3.9,
+            "average_cadence": 85.3,
+            "average_heartrate": 153.8,
+            "max_heartrate": 159.0,
+            "lap_index": 9,
+            "split": 9,
+            "pace_zone": 2
+        },
+        {
+            "id": 11402809793,
+            "resource_state": 2,
+            "name": "Lap 10",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 578,
+            "moving_time": 474,
+            "start_date": "2020-05-10T20:15:08Z",
+            "start_date_local": "2020-05-10T13:15:08Z",
+            "distance": 1609.34,
+            "start_index": 4318,
+            "end_index": 4773,
+            "total_elevation_gain": 3.0,
+            "average_speed": 3.4,
+            "max_speed": 4.0,
+            "average_cadence": 85.9,
+            "average_heartrate": 154.4,
+            "max_heartrate": 160.0,
+            "lap_index": 10,
+            "split": 10,
+            "pace_zone": 2
+        },
+        {
+            "id": 11402809795,
+            "resource_state": 2,
+            "name": "Lap 11",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 483,
+            "moving_time": 483,
+            "start_date": "2020-05-10T20:24:46Z",
+            "start_date_local": "2020-05-10T13:24:46Z",
+            "distance": 1609.34,
+            "start_index": 4774,
+            "end_index": 5240,
+            "total_elevation_gain": 2.0,
+            "average_speed": 3.33,
+            "max_speed": 3.8,
+            "average_cadence": 85.2,
+            "average_heartrate": 156.8,
+            "max_heartrate": 163.0,
+            "lap_index": 11,
+            "split": 11,
+            "pace_zone": 2
+        },
+        {
+            "id": 11402809798,
+            "resource_state": 2,
+            "name": "Lap 12",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 496,
+            "moving_time": 496,
+            "start_date": "2020-05-10T20:32:50Z",
+            "start_date_local": "2020-05-10T13:32:50Z",
+            "distance": 1609.34,
+            "start_index": 5241,
+            "end_index": 5722,
+            "total_elevation_gain": 21.0,
+            "average_speed": 3.24,
+            "max_speed": 3.9,
+            "average_cadence": 84.9,
+            "average_heartrate": 157.1,
+            "max_heartrate": 171.0,
+            "lap_index": 12,
+            "split": 12,
+            "pace_zone": 2
+        },
+        {
+            "id": 11402809800,
+            "resource_state": 2,
+            "name": "Lap 13",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 3,
+            "moving_time": 3,
+            "start_date": "2020-05-10T20:41:06Z",
+            "start_date_local": "2020-05-10T13:41:06Z",
+            "distance": 8.75,
+            "start_index": 5723,
+            "end_index": 5726,
+            "total_elevation_gain": 1.0,
+            "average_speed": 2.92,
+            "max_speed": 2.6,
+            "average_cadence": 81.0,
+            "average_heartrate": 171.7,
+            "max_heartrate": 172.0,
+            "lap_index": 13,
+            "split": 13,
+            "pace_zone": 1
+        }
+    ],
+    "best_efforts": [
+        {
+            "id": 7277758968,
+            "resource_state": 2,
+            "name": "400m",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 111,
+            "moving_time": 112,
+            "start_date": "2020-05-10T19:54:41Z",
+            "start_date_local": "2020-05-10T12:54:41Z",
+            "distance": 400,
+            "start_index": 3127,
+            "end_index": 3238,
+            "pr_rank": null,
+            "achievements": []
+        },
+        {
+            "id": 7277758971,
+            "resource_state": 2,
+            "name": "1/2 mile",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 228,
+            "moving_time": 229,
+            "start_date": "2020-05-10T19:55:37Z",
+            "start_date_local": "2020-05-10T12:55:37Z",
+            "distance": 805,
+            "start_index": 3183,
+            "end_index": 3406,
+            "pr_rank": null,
+            "achievements": []
+        },
+        {
+            "id": 7277758973,
+            "resource_state": 2,
+            "name": "1k",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 285,
+            "moving_time": 286,
+            "start_date": "2020-05-10T19:54:39Z",
+            "start_date_local": "2020-05-10T12:54:39Z",
+            "distance": 1000,
+            "start_index": 3125,
+            "end_index": 3405,
+            "pr_rank": null,
+            "achievements": []
+        },
+        {
+            "id": 7277758976,
+            "resource_state": 2,
+            "name": "1 mile",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 466,
+            "moving_time": 467,
+            "start_date": "2020-05-10T19:52:29Z",
+            "start_date_local": "2020-05-10T12:52:29Z",
+            "distance": 1609,
+            "start_index": 2999,
+            "end_index": 3456,
+            "pr_rank": null,
+            "achievements": []
+        },
+        {
+            "id": 7277758978,
+            "resource_state": 2,
+            "name": "2 mile",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 947,
+            "moving_time": 948,
+            "start_date": "2020-05-10T19:52:29Z",
+            "start_date_local": "2020-05-10T12:52:29Z",
+            "distance": 3219,
+            "start_index": 2999,
+            "end_index": 3919,
+            "pr_rank": null,
+            "achievements": []
+        },
+        {
+            "id": 7277758980,
+            "resource_state": 2,
+            "name": "5k",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 1470,
+            "moving_time": 1471,
+            "start_date": "2020-05-10T19:52:29Z",
+            "start_date_local": "2020-05-10T12:52:29Z",
+            "distance": 5000,
+            "start_index": 2999,
+            "end_index": 4425,
+            "pr_rank": null,
+            "achievements": []
+        },
+        {
+            "id": 7277758982,
+            "resource_state": 2,
+            "name": "10k",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 3081,
+            "moving_time": 3022,
+            "start_date": "2020-05-10T19:29:17Z",
+            "start_date_local": "2020-05-10T12:29:17Z",
+            "distance": 10000,
+            "start_index": 1701,
+            "end_index": 4632,
+            "pr_rank": null,
+            "achievements": []
+        },
+        {
+            "id": 7277758984,
+            "resource_state": 2,
+            "name": "15k",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 4624,
+            "moving_time": 4558,
+            "start_date": "2020-05-10T19:03:18Z",
+            "start_date_local": "2020-05-10T12:03:18Z",
+            "distance": 15000,
+            "start_index": 186,
+            "end_index": 4618,
+            "pr_rank": null,
+            "achievements": []
+        },
+        {
+            "id": 7277758985,
+            "resource_state": 2,
+            "name": "10 mile",
+            "activity": {
+                "id": 3432003922,
+                "resource_state": 1
+            },
+            "athlete": {
+                "id": 20730280,
+                "resource_state": 1
+            },
+            "elapsed_time": 5037,
+            "moving_time": 4875,
+            "start_date": "2020-05-10T19:14:01Z",
+            "start_date_local": "2020-05-10T12:14:01Z",
+            "distance": 16090,
+            "start_index": 808,
+            "end_index": 5541,
+            "pr_rank": null,
+            "achievements": []
+        }
+    ],
+    "photos": {
+        "primary": null,
+        "count": 0
+    },
+    "device_name": "Garmin Forerunner 935",
+    "embed_token": "1885f07cb7b2e97fa90c5114518583a4f5072db9",
+    "similar_activities": {
+        "effort_count": 1,
+        "average_speed": 3.2717020136536834,
+        "min_average_speed": 3.2717020136536834,
+        "mid_average_speed": 3.2717020136536834,
+        "max_average_speed": 3.2717020136536834,
+        "pr_rank": null,
+        "frequency_milestone": null,
+        "trend": {
+            "speeds": [
+                3.2717020136536834
+            ],
+            "current_activity_index": 0,
+            "min_speed": 3.2717020136536834,
+            "mid_speed": 3.2717020136536834,
+            "max_speed": 3.2717020136536834,
+            "direction": 0
+        },
+        "resource_state": 2
+    },
+    "available_zones": [
+        "heartrate",
+        "pace"
+    ]
+}

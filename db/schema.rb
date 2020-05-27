@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_17_144957) do
+ActiveRecord::Schema.define(version: 2020_05_26_202750) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "activities", force: :cascade do |t|
     t.integer "distance"
@@ -19,10 +22,12 @@ ActiveRecord::Schema.define(version: 2020_05_17_144957) do
     t.integer "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.integer "strava_id"
+    t.bigint "strava_id"
     t.string "name"
     t.string "activity_type"
     t.integer "activity_time"
+    t.jsonb "laps"
+    t.jsonb "splits"
     t.index ["strava_id"], name: "index_activities_on_strava_id", unique: true
   end
 
