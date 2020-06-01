@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_26_202750) do
+ActiveRecord::Schema.define(version: 2020_05_30_190252) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +53,17 @@ ActiveRecord::Schema.define(version: 2020_05_26_202750) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string "name"
+    t.integer "strava_id"
+    t.string "strava_username"
+    t.string "strava_firstname"
+    t.string "strava_lastname"
+    t.string "strava_city"
+    t.string "strava_state"
+    t.string "strava_country"
+    t.string "strava_sex"
+    t.string "strava_created_at"
+    t.integer "weight"
+    t.integer "height"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

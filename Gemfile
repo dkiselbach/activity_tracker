@@ -3,6 +3,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 gem 'rails',          '6.0.2.1'
 gem 'pg',             '1.2.3'
+gem 'sidekiq',        '6.0.7'
+gem 'redis'
 gem 'devise',         '4.7.1'
 gem 'devise-jwt', '~> 0.6.0'
 gem 'rack-cors',       '1.1.1'

@@ -1,18 +1,20 @@
 class Api::V1::ActivitiesController < ApplicationController
   include HttpRequest
+  include CheckAuth
   skip_before_action :verify_authenticity_token
   before_action :authenticate_user!
-  before_action :check_token, only: [:create]
+  before_action :check_auth, only: [:create]
+  rescue_from ActiveRecord::RecordNotFound, with: :activity_not_found
 
   def index
-     @activities = current_user.activity.exclude_laps_splits.reorder("created_at DESC").page(params[:page])
-     @current_page = params[:page].to_i if params[:page]
-     render :json => { "pagination" =>{
-                                       "current_page": @current_page || 1,
-                                       "total_pages": @activities.total_pages,
-                                       "total": @activities.count},
-                       "activities" => @activities
-                     }
+   @activities = current_user.activity.exclude_laps_splits.reorder("created_at DESC").page(params[:page])
+   @current_page = params[:page].to_i if params[:page]
+   render :json => { "pagination" =>{
+                                     "current_page": @current_page || 1,
+                                     "total_pages": @activities.total_pages,
+                                     "total": @activities.count},
+                     "activities" => @activities
+                   }
   end
 
   def create
@@ -35,11 +37,13 @@ class Api::V1::ActivitiesController < ApplicationController
   def show
     @activity = current_user.activity.find(params[:id])
     @activity_details = current_user.activity.exclude_laps_splits.find(params[:id])
-    @laps = @activity.laps
-    @splits = @activity.splits
+
+    @activity.laps.blank? || @activity.laps == "null" ? @laps = "No lap data" : @laps = JSON.parse(@activity.laps)
+    @activity.splits.blank? || @activity.laps == "null" ? @splits = "No split data" : @splits = JSON.parse(@activity.splits)
+
     render :json => { "activity" => @activity_details,
-                      "laps" => JSON.parse(@laps),
-                      "splits" => JSON.parse(@splits)}
+                      "laps" => @laps,
+                      "splits" => @splits}
   end
 
   def update
@@ -56,15 +60,8 @@ class Api::V1::ActivitiesController < ApplicationController
                           :calories, :activity_time)
     end
 
-    def check_token
-      if current_user.auth
-        if current_user.auth.check == false
-          render :status => :unprocessable_entity,
-                 :json => { :error => { :token => ["Tokens are invalid" ]} }
-        end
-      else
-        render :status => :unprocessable_entity,
-               :json => { :error => { :auth => ["User has no Auth" ]} }
-      end
+    def activity_not_found
+      render  :status => 404,
+              :json => { :error => { :activity => ["does not exist or the user doesn't have access"] } }
     end
 end

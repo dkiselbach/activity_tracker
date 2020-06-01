@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       resources :activities
       resources :users
       resources :auth, only: [:create]
+      resources :subscriptions
     end
   end
 end
