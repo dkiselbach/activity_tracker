@@ -17,7 +17,7 @@ class User::SessionsController < Devise::SessionsController
              :json => { :error => { :password => ["doesn't match Password"] }}
     else
       render :status => :unauthorized,
-             :json => { :error => { :email => ["Email doesn't exist" ]} }
+             :json => { :error => { :email => ["Email doesn't exist"]} }
     end
   end
 end

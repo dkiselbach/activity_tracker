@@ -3,11 +3,10 @@ class Api::V1::ActivitiesController < ApplicationController
   include CheckAuth
   skip_before_action :verify_authenticity_token
   before_action :authenticate_user!
-  before_action :check_auth, only: [:create]
   rescue_from ActiveRecord::RecordNotFound, with: :activity_not_found
 
   def index
-   @activities = current_user.activity.exclude_laps_splits.reorder("created_at DESC").page(params[:page])
+   @activities = current_user.activity.exclude_laps_splits.reorder("start_date_local DESC").page(params[:page])
    @current_page = params[:page].to_i if params[:page]
    render :json => { "pagination" =>{
                                      "current_page": @current_page || 1,
@@ -18,20 +17,17 @@ class Api::V1::ActivitiesController < ApplicationController
   end
 
   def create
-    url = "#{ENV['STRAVA_SITE_BASE']}/api/v3/athlete/activities"
-    detailed_url = "#{ENV['STRAVA_SITE_BASE']}/api/v3/activities"
+    check_auth(current_user, ENV["STRAVA_CLIENT_ID"], ENV["STRAVA_CLIENT_SECRET"])
+    if @success
+      ActivitiesSyncJob.perform_later(current_user.id, ENV["STRAVA_CLIENT_ID"],
+        ENV["STRAVA_CLIENT_SECRET"])
 
-    response = get(url, current_user.auth.token)
-
-    response.each do |results|
-      @activity = current_user.activity.build
-      if @activity.set_results(results)
-        detailed_results = get("#{detailed_url}/#{results["id"]}?includeallefforts=false", current_user.auth.token)
-        @activity.set_detailed_results(detailed_results)
-      end
-    end
       render :status => 200,
              :json => { :success => ["Activities synced"]}
+    else
+      render :status => 401,
+             :json => { :error => { :auth => ["#{@error}"] }}
+    end
   end
 
   def show

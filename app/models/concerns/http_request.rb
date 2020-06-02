@@ -18,6 +18,8 @@ module HttpRequest
 
     if @response.code == '200'
       @success = JSON.parse(@response.body)
+    elsif @response.code == '429'
+      raise ApiExceptions::RateLimitError.new()
     else
       @error = "HTTP #{@response.code}: #{@response.body}"
     end
@@ -39,6 +41,8 @@ module HttpRequest
 
     if @response.code == '200'
       @success = JSON.parse(@response.body)
+    elsif @response.code == '429'
+      raise ApiExceptions::RateLimitError.new()
     else
       @error = "HTTP #{@response.code}: #{@response.body}"
     end

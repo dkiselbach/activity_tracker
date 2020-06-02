@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_30_190252) do
+ActiveRecord::Schema.define(version: 2020_06_02_033911) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2020_05_30_190252) do
     t.integer "activity_time"
     t.jsonb "laps"
     t.jsonb "splits"
+    t.datetime "start_date_local", precision: 6
     t.index ["strava_id"], name: "index_activities_on_strava_id", unique: true
   end
 
