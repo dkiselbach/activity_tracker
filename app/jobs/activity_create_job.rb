@@ -10,8 +10,8 @@ class ActivityCreateJob < ApplicationJob
       auth_check == true ? @success = true : check_auth(current_user, client_id, client_secret)
       if @success
         url = "https://www.strava.com/api/v3/activities"
-        results = get("#{url}/#{strava_id}?includeallefforts=false", user.auth.token)
-        @activity = user.activity.build(strava_id: "#{results["id"]}", distance: "#{results["distance"]}",
+        results = get("#{url}/#{strava_id}?includeallefforts=false", current_user.auth.token)
+        @activity = current_user.activity.build(strava_id: "#{results["id"]}", distance: "#{results["distance"]}",
           activity_time: "#{results["moving_time"]}", avg_hr: "#{results["average_heartrate"]}",
           activity_type: "#{results["type"]}", name: "#{results["name"]}", calories: "#{results["calories"]}",
           laps: "#{results["laps"].to_json}", splits: "#{results["splits_standard"].to_json}",
