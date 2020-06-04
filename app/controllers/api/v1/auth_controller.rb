@@ -17,10 +17,14 @@ class Api::V1::AuthController < ApplicationController
       }
 
       results = post(url, body)
-      auth = current_user.build_auth(app_name: "Strava", token: "#{results["access_token"]}", refresh_token: "#{results["refresh_token"]}")
+      auth = current_user.build_auth(app_name: "Strava", token: "#{results["access_token"]}",
+        refresh_token: "#{results["refresh_token"]}")
 
       if auth.save
+        profile_image = open(results["athlete"]["profile"])
         current_user.update(strava_id: "#{results["athlete"]["id"]}", strava_username: "#{results["athlete"]["username"]}")
+        current_user.image.attach(io: profile_image, filename: "#{current_user.strava_username}.jpeg", content_type: 'image/jpg')
+
         render :status => 200,
                :json => { :success => ["Strava successfully connected"]}
       else
