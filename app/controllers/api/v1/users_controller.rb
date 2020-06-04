@@ -3,8 +3,7 @@ class Api::V1::UsersController < ApplicationController
   before_action :authenticate_user!
 
   def index
-   @user = current_user
-   render json: @user
+    render :json => current_user.as_json.merge(:profile_image => profile_image_url)
   end
 
   def update
@@ -17,5 +16,9 @@ class Api::V1::UsersController < ApplicationController
 
     def user_params
       params.require(:user).permit(:name, :email, :weight, :height)
+    end
+
+    def profile_image_url
+      url_for(current_user.image)
     end
 end
