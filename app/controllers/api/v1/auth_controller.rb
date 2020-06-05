@@ -23,7 +23,7 @@ class Api::V1::AuthController < ApplicationController
       if auth.save
         profile_image = open(results["athlete"]["profile"])
         current_user.update(strava_id: "#{results["athlete"]["id"]}", strava_username: "#{results["athlete"]["username"]}")
-        current_user.image.purge
+        current_user.image.purge_later
         current_user.image.attach(io: profile_image, filename: "#{current_user.strava_username}.jpeg", content_type: 'image/jpg')
 
         render :status => 200,
