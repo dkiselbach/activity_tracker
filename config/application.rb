@@ -26,6 +26,7 @@ module ActivityTracker
    end
 
    config.active_job.queue_adapter = :sidekiq
+   config.active_storage.queue = :default
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers
