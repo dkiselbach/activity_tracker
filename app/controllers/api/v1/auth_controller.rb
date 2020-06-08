@@ -1,5 +1,6 @@
 class Api::V1::AuthController < ApplicationController
   include HttpRequest
+  include CheckAuth
   skip_before_action :verify_authenticity_token
   before_action :authenticate_user!
 
@@ -43,5 +44,11 @@ class Api::V1::AuthController < ApplicationController
              :json => { :error => { :auth_code => ["is blank"],
                                     :scope => ["is blank or invalid"]}}
     end
+  end
+
+  def index
+    check_auth(current_user, ENV["STRAVA_CLIENT_ID"], ENV["STRAVA_CLIENT_SECRET"])
+      render :status => :unprocessable_entity,
+             :json => { :error => @error }
   end
 end

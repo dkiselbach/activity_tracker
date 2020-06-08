@@ -20,8 +20,13 @@ module HttpRequest
       @success = JSON.parse(@response.body)
     elsif @response.code == '429'
       raise ApiExceptions::RateLimitError.new()
+    elsif @response.code == '400'
+      return false
+    elsif @response.code == '401'
+      raise ApiExceptions::AuthenticationError.new()
     else
       @error = "HTTP #{@response.code}: #{@response.body}"
+      raise ApiExceptions::InvalidRequestError.new(@error)
     end
   end
 
@@ -43,8 +48,11 @@ module HttpRequest
       @success = JSON.parse(@response.body)
     elsif @response.code == '429'
       raise ApiExceptions::RateLimitError.new()
+    elsif @response.code == '401'
+      raise ApiExceptions::AuthenticationError.new()
     else
       @error = "HTTP #{@response.code}: #{@response.body}"
+      raise ApiExceptions::InvalidRequestError.new(@error)
     end
   end
 end

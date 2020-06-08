@@ -38,5 +38,5 @@ yarn-debug.log*
 # Ignore heroku env variables
 config/heroku_env.rb
 
-# Ignore scripts
+# Ignore script files
 /scripts
