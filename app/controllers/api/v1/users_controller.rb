@@ -10,8 +10,9 @@ class Api::V1::UsersController < ApplicationController
     @user = User.find(params[:id])
     longest_run = Activity.exclude_laps_splits.where(activity_type: "Run").order("distance DESC").first
     longest_ride = Activity.exclude_laps_splits.where(activity_type: "Ride").order("distance DESC").first
+    fastest_5k = Activity.exclude_laps_splits.where(activity_type: "Run").where("distance > ?", 20960).order("speed DESC").first
     render :json => @user.as_json.merge(:longest_run => longest_run, :longest_ride => longest_ride,
-      :profile_image => profile_image_url)
+      :profile_image => profile_image_url, :fastest_5k => fastest_5k)
   end
 
   def update

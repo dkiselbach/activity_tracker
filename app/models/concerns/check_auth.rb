@@ -8,13 +8,13 @@ module CheckAuth
       get(test_url, user.auth.token)
         if @response.code == '200'
           @success = "Strava auth is valid"
-        elsif refresh(user, client_id, client_secret)
-          @success = "Strava auth refreshed"
-        else
-          @error = "Tokens are invalid"
+        #elsif refresh(user, client_id, client_secret)
+        #  @success = "Strava auth refreshed"
+        #else
+        #  @error = {:type => "token", :message => "Tokens are invalid"}
         end
     else
-      @error = "User has no Auth"
+      @error = {:type => "auth", :message => "User has no auth"}
     end
   end
 
