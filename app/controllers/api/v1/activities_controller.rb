@@ -6,14 +6,21 @@ class Api::V1::ActivitiesController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :activity_not_found
 
   def index
-   @activities = current_user.activity.exclude_laps_splits.reorder("start_date_local DESC").page(params[:page])
-   @current_page = params[:page].to_i if params[:page]
-   render :json => { "pagination" =>{
-                                     "current_page": @current_page || 1,
-                                     "total_pages": @activities.total_pages,
-                                     "total": @activities.count},
-                     "activities" => @activities
-                   }
+    if params[:start_date] && params[:end_date]
+      start_date = params[:start_date]
+      end_date = params[:end_date]
+      activities = current_user.activity.exclude_laps_splits.where('start_date_local BETWEEN ? AND ?', start_date, end_date)
+    else
+      activities = current_user.activity.exclude_laps_splits
+    end
+     @activities = activities.reorder("start_date_local DESC").page(params[:page])
+     @current_page = params[:page].to_i if params[:page]
+     render :json => { "pagination" =>{
+                                       "current_page": @current_page || 1,
+                                       "total_pages": @activities.total_pages,
+                                       "total": @activities.count},
+                       "activities" => @activities
+                     }
   end
 
   def create
