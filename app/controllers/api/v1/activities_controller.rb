@@ -9,18 +9,23 @@ class Api::V1::ActivitiesController < ApplicationController
     if params[:start_date] && params[:end_date]
       start_date = params[:start_date]
       end_date = params[:end_date]
-      activities = current_user.activity.exclude_laps_splits.where('start_date_local BETWEEN ? AND ?', start_date, end_date)
+      activities = current_user.activity.exclude_laps_splits.where('start_date_local BETWEEN ? AND ?', start_date, end_date).reorder("start_date_local DESC")
     else
-      activities = current_user.activity.exclude_laps_splits
+      activities = current_user.activity.exclude_laps_splits.reorder("start_date_local DESC")
     end
-     @activities = activities.reorder("start_date_local DESC").page(params[:page])
-     @current_page = params[:page].to_i if params[:page]
+    if params[:page]
+      @activities = activities.page(params[:page])
+      @current_page = params[:page].to_i if params[:page]
      render :json => { "pagination" =>{
                                        "current_page": @current_page || 1,
                                        "total_pages": @activities.total_pages,
                                        "total": @activities.count},
                        "activities" => @activities
                      }
+    else
+      @activities = activities
+      render :json => {"activities" => @activities}
+    end
   end
 
   def create
