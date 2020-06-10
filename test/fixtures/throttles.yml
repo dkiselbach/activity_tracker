@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  hourlyusage: 1
+  dailyusage: 1
+  appname: MyString
+
+two:
+  hourlyusage: 1
+  dailyusage: 1
+  appname: MyString

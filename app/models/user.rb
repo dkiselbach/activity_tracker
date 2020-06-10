@@ -2,6 +2,7 @@ class User < ApplicationRecord
   has_one :auth, :dependent => :destroy
   has_one_attached :image, :dependent => :purge_later
   has_many :activity, :dependent => :destroy
+  has_many :throttle
   accepts_nested_attributes_for :auth, :allow_destroy => true
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,
