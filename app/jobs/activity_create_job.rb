@@ -1,4 +1,6 @@
 class ActivityCreateJob < ApplicationJob
+  include HttpRequest
+  include CheckAuth
   queue_as :default
   retry_on ApiExceptions::AuthenticationError, attempts: 1
   rescue_from ApiExceptions::AuthenticationError do
