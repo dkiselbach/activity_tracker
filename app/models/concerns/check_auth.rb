@@ -37,18 +37,6 @@ module CheckAuth
 
   def throttled?
     @throttle = Throttle.last
-    if @throttle.limit_type == "daily"
-      if Time.now.utc.to_date > @throttle.created_at.utc.to_date
-        return false
-      else
-        @time = ((Time.now.utc.midnight.tomorrow - Time.now.utc)/60).minutes
-      end
-    elsif @throttle.limit_type == "15-minute"
-      if Time.now.utc > @throttle.created_at.utc + 15 * 60
-        return false
-      else
-        @time = (((@throttle.created_at.utc + 15 * 60) - Time.now.utc)/60).minutes
-      end
-    end
+    @time = @throttle.limited?
   end
 end

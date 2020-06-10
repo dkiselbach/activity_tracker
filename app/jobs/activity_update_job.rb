@@ -2,17 +2,22 @@ class ActivityUpdateJob < ApplicationJob
   include HttpRequest
   include CheckAuth
   queue_as :default
-  retry_on ApiExceptions::RateLimitError, wait: 15.minutes, attempts: 3
   retry_on ApiExceptions::AuthenticationError, attempts: 1
   rescue_from ApiExceptions::AuthenticationError do
     refresh(@current_user, @client_id, @client_secret)
   end
   rescue_from ApiExceptions::RateLimitError do
-    puts "This job will rety in 15 minutes"
+    @current_user.throttle.create(hourlyusage: @response.header['X-RateLimit-Usage'].split(",").first, dailyusage: @response.header['X-RateLimit-Usage'].split(",").second, appname: "Strava")
   end
 
   def perform(strava_id, user_id, strava_client_id, strava_client_secret)
     if Activity.exists?(strava_id: strava_id)
+
+      if throttled?
+        ActivityUpdateJob.set(wait: @time).perform_later(strava_id, user_id, strava_client_id, strava_client_secret)
+        return
+      end
+
       @current_user = User.find(user_id)
       @client_id = strava_client_id
       @client_secret = strava_client_secret
