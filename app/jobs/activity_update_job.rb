@@ -7,6 +7,9 @@ class ActivityUpdateJob < ApplicationJob
   rescue_from ApiExceptions::AuthenticationError do
     refresh(@current_user, @client_id, @client_secret)
   end
+  rescue_from ApiExceptions::RateLimitError do
+    puts "This job will rety in 15 minutes"
+  end
 
   def perform(strava_id, user_id, strava_client_id, strava_client_secret)
     if Activity.exists?(strava_id: strava_id)
@@ -20,7 +23,6 @@ class ActivityUpdateJob < ApplicationJob
         activity_type: "#{results["type"]}", name: "#{results["name"]}", calories: "#{results["calories"]}",
         laps: "#{results["laps"].to_json}", splits: "#{results["splits_standard"].to_json}",
         start_date_local: "#{results["start_date_local"]}", speed: "#{results["average_speed"]}")
-      byebug
     end
   end
 end

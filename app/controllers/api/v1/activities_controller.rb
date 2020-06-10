@@ -29,17 +29,11 @@ class Api::V1::ActivitiesController < ApplicationController
   end
 
   def create
-    check_auth(current_user, ENV["STRAVA_CLIENT_ID"], ENV["STRAVA_CLIENT_SECRET"])
-    if @success
-      ActivitiesSyncJob.perform_later(current_user.id, ENV["STRAVA_CLIENT_ID"],
-        ENV["STRAVA_CLIENT_SECRET"])
+    ActivitiesSyncJob.perform_later(current_user.id, ENV["STRAVA_CLIENT_ID"],
+      ENV["STRAVA_CLIENT_SECRET"])
 
-      render :status => 200,
-             :json => { :success => ["Activities synced"]}
-    else
-      render :status => 401,
-             :json => { :error => { :auth => ["#{@error}"] }}
-    end
+    render :status => 200,
+           :json => { :success => ["Activities synced"]}
   end
 
   def show
