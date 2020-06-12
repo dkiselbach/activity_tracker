@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_10_142701) do
+ActiveRecord::Schema.define(version: 2020_06_11_073718) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -51,6 +51,7 @@ ActiveRecord::Schema.define(version: 2020_06_10_142701) do
     t.jsonb "splits"
     t.datetime "start_date_local", precision: 6
     t.float "speed"
+    t.jsonb "splits_metric"
     t.index ["strava_id"], name: "index_activities_on_strava_id", unique: true
   end
 
@@ -64,10 +65,34 @@ ActiveRecord::Schema.define(version: 2020_06_10_142701) do
     t.index ["user_id"], name: "index_auths_on_user_id"
   end
 
+  create_table "profiles", force: :cascade do |t|
+    t.integer "weight"
+    t.integer "height"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_profiles_on_user_id"
+  end
+
+  create_table "records", force: :cascade do |t|
+    t.string "name"
+    t.integer "distance"
+    t.integer "elapsed_time"
+    t.integer "moving_time"
+    t.datetime "start_date_local"
+    t.integer "pr_rank"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "strava_id"
+    t.index ["strava_id"], name: "index_records_on_strava_id"
+    t.index ["user_id"], name: "index_records_on_user_id"
+  end
+
   create_table "throttles", force: :cascade do |t|
-    t.integer "hourlyusage"
-    t.integer "dailyusage"
-    t.string "appname"
+    t.integer "hourly_usage"
+    t.integer "daily_usage"
+    t.string "app_name"
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
@@ -96,8 +121,6 @@ ActiveRecord::Schema.define(version: 2020_06_10_142701) do
     t.string "strava_country"
     t.string "strava_sex"
     t.string "strava_created_at"
-    t.integer "weight"
-    t.integer "height"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
@@ -106,5 +129,7 @@ ActiveRecord::Schema.define(version: 2020_06_10_142701) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "activities", "users"
   add_foreign_key "auths", "users"
+  add_foreign_key "profiles", "users"
+  add_foreign_key "records", "users"
   add_foreign_key "throttles", "users"
 end

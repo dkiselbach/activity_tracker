@@ -48,7 +48,12 @@ class Api::V1::AuthController < ApplicationController
 
   def index
     check_auth(current_user, ENV["STRAVA_CLIENT_ID"], ENV["STRAVA_CLIENT_SECRET"])
+    if @success
+      render :status => 200,
+             :json => { :success => ["Strava auth is valid"]}
+    else
       render :status => :unprocessable_entity,
              :json => { :error => @error }
+    end
   end
 end

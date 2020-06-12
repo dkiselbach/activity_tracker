@@ -2,12 +2,12 @@ class ActivitiesSyncJob < ApplicationJob
   include HttpRequest
   include CheckAuth
   queue_as :default
-  retry_on ApiExceptions::AuthenticationError, attempts: 1
   rescue_from ApiExceptions::AuthenticationError do
-    refresh(@current_user, @client_id, @client_secret)
+    retry_job if refresh(@current_user, @client_id, @client_secret)
   end
   rescue_from ApiExceptions::RateLimitError do
-    @current_user.throttle.create(hourlyusage: @response.header['X-RateLimit-Usage'].split(",").first, dailyusage: @response.header['X-RateLimit-Usage'].split(",").second, appname: "Strava")
+    @current_user.throttle.create(hourly_usage: @response.header['X-RateLimit-Usage'].split(",").first, daily_usage: @response.header['X-RateLimit-Usage'].split(",").second, app_name: "Strava")
+    retry_job(wait: @time) if throttled?
   end
 
   def perform(user_id, strava_client_id, strava_client_secret)

@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  distance: 1
+  name: MyString
+  start_date_local: 2020-06-10 20:51:34
+  pr_rank: MyString
+  integer: MyString
+
+two:
+  distance: 1
+  name: MyString
+  start_date_local: 2020-06-10 20:51:34
+  pr_rank: MyString
+  integer: MyString

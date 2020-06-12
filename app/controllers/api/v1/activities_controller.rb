@@ -7,9 +7,12 @@ class Api::V1::ActivitiesController < ApplicationController
 
   def index
     if params[:start_date] && params[:end_date]
-      start_date = params[:start_date]
-      end_date = params[:end_date]
+      start_date = params[:start_date].to_datetime
+      end_date = params[:end_date].to_datetime
       activities = current_user.activity.exclude_laps_splits.where('start_date_local BETWEEN ? AND ?', start_date, end_date).reorder("start_date_local DESC")
+    elsif params[:start_date]
+      start_date = params[:start_date].to_datetime
+      activities = current_user.activity.exclude_laps_splits.where('start_date_local > ?', start_date).reorder("start_date_local DESC")
     else
       activities = current_user.activity.exclude_laps_splits.reorder("start_date_local DESC")
     end
