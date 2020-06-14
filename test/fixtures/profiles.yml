@@ -1,9 +1,13 @@
 one:
+  id: 1
   weight: 100
   height: 150
   user_id: 1
+  created_at: <%= Time.now - 2.day %>
 
 two:
-  weight: 1
-  height: 1
+  id: 2
+  weight: 110
+  height: 155
   user_id: 1
+  created_at: <%= Time.now - 1.day %>
