@@ -19,4 +19,9 @@ class AuthTest < ActiveSupport::TestCase
     @auth.token = "   "
     assert_not @auth.valid?
   end
+
+  test "should delete if users destroyed" do
+    @user.destroy
+    assert_raise(ActiveRecord::RecordNotFound) { @auth.reload }
+  end
 end

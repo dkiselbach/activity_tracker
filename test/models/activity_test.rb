@@ -25,4 +25,9 @@ class ActivityTest < ActiveSupport::TestCase
     @activity.save
     assert_not duplicate_activity.valid?
   end
+
+  test "should delete if users destroyed" do
+    @user.destroy
+    assert_raise(ActiveRecord::RecordNotFound) { @activity.reload }
+  end
 end

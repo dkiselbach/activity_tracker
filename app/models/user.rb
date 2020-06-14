@@ -4,7 +4,7 @@ class User < ApplicationRecord
   has_many :activity, :dependent => :destroy
   has_many :profile, :dependent => :destroy
   has_many :record, :dependent => :destroy
-  has_many :throttle
+  has_many :throttle, :dependent => :destroy
   accepts_nested_attributes_for :auth, :allow_destroy => true
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable,

@@ -4,7 +4,7 @@ class Throttle < ApplicationRecord
   before_save :set_limit
 
   def set_limit
-    if daily_usage > 1000
+    if daily_usage >= 1000
       self.limit_type = "daily"
     else
       self.limit_type = "15-minute"

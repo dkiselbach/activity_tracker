@@ -66,6 +66,14 @@ class Api::V1::UsersControllerTest < ActionDispatch::IntegrationTest
     assert_equal url_for(@user_without_auth.image), json_response["profile_image"]
   end
 
+  test "image purge should be enqueued" do
+    #get a new profile image
+    stub_auth_request_success
+    sign_in(@user_without_auth)
+    post api_v1_auth_index_url(scope: "read,activity:read_all,read_all", code: "Valid_Code"), headers: @authorization
+    assert_enqueued_jobs 1
+  end
+
   test "update user with no auth should return error" do
     patch api_v1_user_url(id: 2)
     json_response = JSON.parse(response.body)
