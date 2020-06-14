@@ -7,7 +7,7 @@ class User::ConfirmationsController < Devise::ConfirmationsController
 
     if successfully_sent?(resource)
       render :status => 200,
-             :json => { :success => ["email sent"],
+             :json => { :success => ["Email sent"],
                         :email => [resource.email] }
     else
       render :status => :unauthorized,

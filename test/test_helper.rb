@@ -20,11 +20,13 @@ class ActiveSupport::TestCase
   include DeviseJwtHelper
   include Devise::JWT::TestHelpers
   include HttpRequestHelper
+  include JSONFixtures
 end
 
 class ActionDispatch::IntegrationTest
   include HttpRequestHelper
   include DeviseJwtHelper
   include Devise::JWT::TestHelpers
+  include JSONFixtures
   #include Devise::Test::IntegrationHelpers
 end

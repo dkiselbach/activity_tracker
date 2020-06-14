@@ -1,7 +1,7 @@
 module DeviseJwtHelper
   def sign_in(user)
   # The argument 'user' should be a hash that includes the params 'email' and 'password'.
-    post '/users/sign_in',
+    post user_session_path,
     params: { email: user.email, password: "password" },
     as: :json
     @authorization = response.headers.slice('Authorization')
@@ -9,10 +9,10 @@ module DeviseJwtHelper
 
   def invalid_sign_in(user)
     # The argument 'user' should be a hash that includes the params 'email' and 'password'.
-    post '/users/sign_in',
+    post user_session_path,
       params: { email: user.email, password: "foobar" },
       as: :json
-    response.headers.slice('Authorization')
+    response.body
   end
 
   def jwt_login(user)

@@ -1,20 +1,22 @@
 one:
-  distance: 10k
-  name: 10k
+  id: 1
+  distance: 21097
+  name: Half-Marathon
   start_date_local: 2020-06-10 20:51:34
-  pr_rank: 2
-  user_id: 1
+  pr_rank: 1
+  user_id: 2
   strava_id: 123456
   :elapsed_time: 60
   :moving_time: 55
 
 
 two:
-  distance: 5k
-  name: 5k
+  id: 2
+  distance: 10000
+  name: 10k
   start_date_local: 2020-06-10 20:51:34
   pr_rank: 1
-  user_id: 1
+  user_id: 2
   strava_id: 123456
   :elapsed_time: 120
   :moving_time: 80

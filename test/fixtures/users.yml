@@ -24,6 +24,7 @@ archer:
   email: archer@example.org
   encrypted_password: <%= User.new.send(:password_digest, 'password') %>
   id: 4
+  confirmation_token: tsEYtdX5kANR7Fu5c5sh
 
 jimbo:
   name: Jimbo Test

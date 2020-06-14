@@ -1,35 +1,39 @@
-run:
-  distance: 1000
+run_1:
+  id: 1
+  distance: 30000
   avg_hr: 169
   user_id: 1
-  strava_id: 123456
+  strava_id: 123458
   name: Fun Run
-  activity_type: run
+  activity_type: Run
   activity_time: 69
 
-bike:
-  distance: 1000
+bike_1:
+  id: 2
+  distance: 20000
   avg_hr: 169
   user_id: 1
   strava_id: 123457
   name: Fun Bike
-  activity_type: bike
+  activity_type: Ride
   activity_time: 69
 
-swim:
-  distance: 1000
+run_2:
+  id: 3
+  distance: 25000
   avg_hr: 169
   user_id: 2
-  strava_id: 123446
+  strava_id: 123456
   name: Fun Run
-  activity_type: run
+  activity_type: Run
   activity_time: 69
 
-hike:
+bike_2:
+  id: 4
   distance: 1000
   avg_hr: 169
   user_id: 2
-  strava_id: 123447
+  strava_id: 123459
   name: Fun Bike
-  activity_type: bike
+  activity_type: Ride
   activity_time: 69
