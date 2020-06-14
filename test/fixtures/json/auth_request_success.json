@@ -20,7 +20,7 @@
         "updated_at": "2020-05-11T01:08:46Z",
         "badge_type_id": 1,
         "profile_medium": "https://dgalywyr863hv.cloudfront.net/pictures/athletes/20730280/12345679/2/medium.jpg",
-        "profile": "https://dgalywyr863hv.cloudfront.net/pictures/athletes/20730280/12345679/2/large.jpg",
+        "profile": "/Users/dylankiselbach/environment/activity_tracker/test/fixtures/files/profile_image.jpg",
         "friend": null,
         "follower": null
     }

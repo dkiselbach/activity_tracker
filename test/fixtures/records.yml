@@ -1,15 +1,20 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
 one:
-  distance: 1
-  name: MyString
+  distance: 10k
+  name: 10k
   start_date_local: 2020-06-10 20:51:34
-  pr_rank: MyString
-  integer: MyString
+  pr_rank: 2
+  user_id: 1
+  strava_id: 123456
+  :elapsed_time: 60
+  :moving_time: 55
+
 
 two:
-  distance: 1
-  name: MyString
+  distance: 5k
+  name: 5k
   start_date_local: 2020-06-10 20:51:34
-  pr_rank: MyString
-  integer: MyString
+  pr_rank: 1
+  user_id: 1
+  strava_id: 123456
+  :elapsed_time: 120
+  :moving_time: 80

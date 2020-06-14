@@ -22,7 +22,7 @@ module HttpRequestHelper
     response_body = options.fetch(:response_body,
                                   json_string("refresh_token_success.json"))
     stub_request(:post, url).with(
-      body: {"client_id"=>"", "client_secret"=>"", "grant_type"=>"refresh_token", "refresh_token"=>"Valid_Refresh"},
+      body: {"client_id"=>ENV["STRAVA_CLIENT_ID"], "client_secret"=>ENV["STRAVA_CLIENT_SECRET"], "grant_type"=>"refresh_token", "refresh_token"=>"Valid_Refresh"},
       headers: {
       'Accept'=>'*/*',
       'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
@@ -56,7 +56,7 @@ module HttpRequestHelper
                                   json_string("auth_request_success.json"))
     stub_request(:post, url).
             with(
-              body: {"client_id"=>"", "client_secret"=>"", "code"=>"Valid_Code", "grant_type"=>"authorization_code", "redirect_uri"=>"http://www.example.com/auth/strava/code"},
+              body: {"client_id"=>ENV["STRAVA_CLIENT_ID"], "client_secret"=>ENV["STRAVA_CLIENT_SECRET"], "code"=>"Valid_Code", "grant_type"=>"authorization_code"},
               headers: {
           	  'Accept'=>'*/*',
           	  'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
@@ -67,14 +67,14 @@ module HttpRequestHelper
             to_return(status: status, body: response_body)
   end
 
-  def stub_auth_request_failure(options = {})
+  def stub_auth_request_error(options = {})
     url = "https://www.strava.com/oauth/token"
     status = options.fetch(:status, 400)
     response_body = options.fetch(:response_body,
                                   json_string("auth_request_failure.json"))
     stub_request(:post, url).
             with(
-              body: {"client_id"=>"", "client_secret"=>"", "code"=>"Invalid_Code", "grant_type"=>"authorization_code", "redirect_uri"=>"http://www.example.com/auth/strava/code"},
+              body: {"client_id"=>ENV["STRAVA_CLIENT_ID"], "client_secret"=>ENV["STRAVA_CLIENT_SECRET"], "code"=>"Invalid_Code", "grant_type"=>"authorization_code"},
               headers: {
           	  'Accept'=>'*/*',
           	  'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
@@ -106,7 +106,7 @@ module HttpRequestHelper
     response_body = options.fetch(:response_body,
                                   json_string("refresh_token_error.json"))
     stub_request(:post, url).with(
-      body: {"client_id"=>"", "client_secret"=>"", "grant_type"=>"refresh_token", "refresh_token"=>"Invalid_Refresh"},
+      body: {"client_id"=>ENV["STRAVA_CLIENT_ID"], "client_secret"=>ENV["STRAVA_CLIENT_SECRET"], "grant_type"=>"refresh_token", "refresh_token"=>"Invalid_Refresh"},
       headers: {
       'Accept'=>'*/*',
       'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
