@@ -7,6 +7,7 @@ run_1:
   name: Fun Run
   activity_type: Run
   activity_time: 69
+  start_date_local: <%= Time.now - 2.day %>
 
 bike_1:
   id: 2
@@ -17,6 +18,7 @@ bike_1:
   name: Fun Bike
   activity_type: Ride
   activity_time: 69
+  start_date_local: <%= Time.now %>
 
 run_2:
   id: 3
@@ -37,3 +39,14 @@ bike_2:
   name: Fun Bike
   activity_type: Ride
   activity_time: 69
+
+run_3:
+  id: 5
+  distance: 30000
+  avg_hr: 169
+  user_id: 1
+  strava_id: 123468
+  name: Fun Run
+  activity_type: Run
+  activity_time: 69
+  start_date_local: <%= Time.now - 4.day %>

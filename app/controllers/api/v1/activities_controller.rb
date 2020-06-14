@@ -18,9 +18,9 @@ class Api::V1::ActivitiesController < ApplicationController
     end
     if params[:page]
       @activities = activities.page(params[:page])
-      @current_page = params[:page].to_i if params[:page]
+      @current_page = params[:page].to_i
      render :json => { "pagination" =>{
-                                       "current_page": @current_page || 1,
+                                       "current_page": @current_page,
                                        "total_pages": @activities.total_pages,
                                        "total": @activities.count},
                        "activities" => @activities
@@ -32,11 +32,16 @@ class Api::V1::ActivitiesController < ApplicationController
   end
 
   def create
-    ActivitiesSyncJob.perform_later(current_user.id, ENV["STRAVA_CLIENT_ID"],
-      ENV["STRAVA_CLIENT_SECRET"])
+    if current_user.auth
+      ActivitiesSyncJob.perform_later(current_user.id, ENV["STRAVA_CLIENT_ID"],
+        ENV["STRAVA_CLIENT_SECRET"])
 
-    render :status => 200,
-           :json => { :success => ["Activities synced"]}
+      render :status => 200,
+             :json => { :success => ["Activities synced"]}
+    else
+      render :status => :unprocessable_entity,
+             :json => { :error => { :auth => ["User has no Auth"]}}
+    end
   end
 
   def show
@@ -44,11 +49,13 @@ class Api::V1::ActivitiesController < ApplicationController
     @activity_details = current_user.activity.exclude_laps_splits.find(params[:id])
 
     @activity.laps.blank? || @activity.laps == "null" ? @laps = "No lap data" : @laps = JSON.parse(@activity.laps)
-    @activity.splits.blank? || @activity.laps == "null" ? @splits = "No split data" : @splits = JSON.parse(@activity.splits)
+    @activity.splits.blank? || @activity.splits == "null" ? @splits = "No split data" : @splits = JSON.parse(@activity.splits)
+    @activity.splits_metric.blank? || @activity.splits_metric == "null" ? @splits_metric = "No split data" : @splits_metric = JSON.parse(@activity.splits_metric)
 
     render :json => { "activity" => @activity_details,
                       "laps" => @laps,
-                      "splits" => @splits}
+                      "splits" => @splits,
+                      "splits_metric" => @splits_metric}
   end
 
   def update
