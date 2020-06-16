@@ -12,18 +12,24 @@ class ActivityUpdateJob < ApplicationJob
 
   def perform(strava_id, user_id, strava_client_id, strava_client_secret)
     if Activity.exists?(strava_id: strava_id)
+      activity = Activity.find_by(strava_id: strava_id)
 
       if throttled?
         ActivityUpdateJob.set(wait: @time).perform_later(strava_id, user_id, strava_client_id, strava_client_secret)
         return
       end
 
+      if activity.user_id != user_id
+        return
+      end
+
       @current_user = User.find(user_id)
       @client_id = strava_client_id
       @client_secret = strava_client_secret
+
       url = "https://www.strava.com/api/v3/activities"
       results = get("#{url}/#{strava_id}?includeallefforts=false", @current_user.auth.token)
-      Activity.find_by(strava_id: strava_id).update(distance: results["distance"],
+      activity.update(distance: results["distance"],
         activity_time: results["moving_time"], avg_hr: results["average_heartrate"],
         activity_type: results["type"], name: results["name"], calories: results["calories"],
         laps: results["laps"].to_json,  splits: results["splits_standard"].to_json, splits_metric: results["splits_metric"].to_json, start_date_local: results["start_date_local"], speed: results["average_speed"])

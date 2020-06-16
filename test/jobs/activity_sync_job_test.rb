@@ -66,4 +66,13 @@ class ActivitySyncJobTest < ActiveJob::TestCase
     end
     assert_enqueued_with(job: ActivitiesSyncJob, args: [@user_with_valid_auth.id, ENV["STRAVA_CLIENT_ID"], ENV["STRAVA_CLIENT_SECRET"]], at: Time.now.utc.midnight.tomorrow)
   end
+
+  test "Job ran when throttled should not run" do
+    @user_with_valid_auth.throttle.create(hourly_usage: 100, daily_usage: 1000, app_name: "Strava")
+
+    assert_difference "Activity.count", 0 do
+      ActivitiesSyncJob.perform_now(@user_with_valid_auth.id, ENV["STRAVA_CLIENT_ID"], ENV["STRAVA_CLIENT_SECRET"])
+    end
+    assert_enqueued_with(job: ActivitiesSyncJob, args: [@user_with_valid_auth.id, ENV["STRAVA_CLIENT_ID"], ENV["STRAVA_CLIENT_SECRET"]], at: Time.now.utc.midnight.tomorrow)
+  end
 end
