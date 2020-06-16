@@ -10,14 +10,16 @@ class Api::V1::SubscriptionsController < ApplicationController
 
   def create
     if @user = User.find_by(strava_id: params["owner_id"])
-      if params["aspect_type"] == "create"
-        ActivityCreateJob.perform_later(params["object_id"], @user.id,
-          ENV["STRAVA_CLIENT_ID"], ENV["STRAVA_CLIENT_SECRET"])
-      elsif params["aspect_type"] == "update"
-        ActivityUpdateJob.perform_later(params["object_id"], @user.id,
-          ENV["STRAVA_CLIENT_ID"], ENV["STRAVA_CLIENT_SECRET"])
-      elsif params["aspect_type"] == "delete"
-        ActivityDeleteJob.perform_later(params["object_id"])
+      if @user.auth
+        if params["aspect_type"] == "create"
+          ActivityCreateJob.perform_later(params["object_id"], @user.id,
+            ENV["STRAVA_CLIENT_ID"], ENV["STRAVA_CLIENT_SECRET"])
+        elsif params["aspect_type"] == "update"
+          ActivityUpdateJob.perform_later(params["object_id"], @user.id,
+            ENV["STRAVA_CLIENT_ID"], ENV["STRAVA_CLIENT_SECRET"])
+        elsif params["aspect_type"] == "delete"
+          ActivityDeleteJob.perform_later(params["object_id"])
+        end
       end
     end
     render :status => 200,

@@ -33,6 +33,21 @@ class Api::V1::SubscriptionsControllerTest < ActionDispatch::IntegrationTest
     assert_enqueued_jobs 0
   end
 
+  test "post create with valid strava_id for user with invalid auth and create webhook should not enqueue active job" do
+    post api_v1_subscriptions_url("aspect_type":"create",
+                                	"event_time":1590860440,
+                                	"object_id": 3585649981,
+                                	"object_type":"activity",
+                                	"owner_id": 1212,
+                                	"subscription_id":157853,
+                                	"updates":{})
+    json_response = JSON.parse(response.body)
+    assert_response 200
+    assert_equal ["subscription recieved"], json_response["success"]
+    assert_enqueued_jobs 0
+  end
+
+
   test "post create with valid strava_id and create webhook should enqueue active job" do
     post api_v1_subscriptions_url("aspect_type":"create",
                                 	"event_time":1590860440,
@@ -45,7 +60,7 @@ class Api::V1::SubscriptionsControllerTest < ActionDispatch::IntegrationTest
     assert_response 200
     assert_equal ["subscription recieved"], json_response["success"]
     assert_enqueued_jobs 1
-    assert_enqueued_with(job: ActivityCreateJob, args: ["3585649981", 1, ENV["STRAVA_CLIENT_ID"], ENV["STRAVA_CLIENT_SECRET"]])
+    assert_enqueued_with(job: ActivityCreateJob, args: ["3585649981", 3, ENV["STRAVA_CLIENT_ID"], ENV["STRAVA_CLIENT_SECRET"]])
   end
 
   test "post create with valid strava_id and update webhook should enqueue active job" do
@@ -60,7 +75,7 @@ class Api::V1::SubscriptionsControllerTest < ActionDispatch::IntegrationTest
     assert_response 200
     assert_equal ["subscription recieved"], json_response["success"]
     assert_enqueued_jobs 1
-    assert_enqueued_with(job: ActivityUpdateJob, args: ["3585649981", 1, ENV["STRAVA_CLIENT_ID"], ENV["STRAVA_CLIENT_SECRET"]])
+    assert_enqueued_with(job: ActivityUpdateJob, args: ["3585649981", 3, ENV["STRAVA_CLIENT_ID"], ENV["STRAVA_CLIENT_SECRET"]])
   end
 
   test "post create with valid strava_id and delete webhook should not enqueue active job" do

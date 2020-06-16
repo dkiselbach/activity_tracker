@@ -4,6 +4,7 @@ one:
   app_name: MyString
   user_id: 1
   limit_type: "daily"
+  created_at: <%= Time.now - 1.day %>
 
 two:
   hourly_usage: 1
@@ -11,3 +12,4 @@ two:
   app_name: MyString
   user_id: 1
   limit_type: "15-minute"
+  created_at: <%= Time.now - 1.day %>
