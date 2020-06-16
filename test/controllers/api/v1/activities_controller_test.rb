@@ -87,6 +87,7 @@ class Api::V1::ActivitiesControllerTest < ActionDispatch::IntegrationTest
       assert_response 200
       assert_equal ["Activities synced"], json_response["success"]
       assert_enqueued_jobs 1
+      assert_enqueued_with(job: ActivitiesSyncJob, args: [@user_with_auth.id, ENV["STRAVA_CLIENT_ID"], ENV["STRAVA_CLIENT_SECRET"]])
     end
 
     test "get show with invalid id should return error" do
