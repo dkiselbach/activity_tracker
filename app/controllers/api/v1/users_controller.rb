@@ -1,6 +1,7 @@
 class Api::V1::UsersController < ApplicationController
   skip_before_action :verify_authenticity_token
   before_action :authenticate_user!
+  rescue_from ActiveRecord::RecordNotFound, with: :user_error
 
   def index
     @user = current_user
@@ -24,18 +25,30 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def update
-    if current_user.update(user_params)
-      render json: current_user
+    if current_user == User.find(params[:id])
+      if current_user.update(user_params)
+        render json: current_user
+      else
+        render :status => :unprocessable_entity,
+               :json => { :error => { :params => JSON.parse(current_user.errors.messages.to_json)} }
+      end
+    else
+      user_error
     end
   end
 
   private
 
     def user_params
-      params.require(:user).permit(:name, :email)
+      params.require(:user).permit(:name, :email, :weight, :height)
     end
 
     def profile_image_url
       url_for(current_user.image)
+    end
+
+    def user_error
+      render  :status => 404,
+              :json => { :error => { :user => ["does not exist or the user doesn't have access"] } }
     end
 end

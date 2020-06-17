@@ -8,7 +8,7 @@ Rails.application.routes.draw do
       resources :users
       resources :auth, only: [:create, :index]
       resources :subscriptions
-      resources :profiles, only: [:create, :index]
+      resources :biometrics, only: [:create, :index]
     end
   end
 end
