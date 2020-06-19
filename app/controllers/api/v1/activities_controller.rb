@@ -6,18 +6,25 @@ class Api::V1::ActivitiesController < ApplicationController
   rescue_from ActiveRecord::RecordNotFound, with: :activity_not_found
 
   def index
+    if params[:include_followers]
+      activities = current_user.feed
+    else
+      activities = current_user.activity.exclude_laps_splits
+    end
+
     if params[:start_date] && params[:end_date]
       start_date = params[:start_date].to_datetime
       end_date = params[:end_date].to_datetime
-      activities = current_user.activity.exclude_laps_splits.where('start_date_local BETWEEN ? AND ?', start_date, end_date).reorder("start_date_local DESC")
+      index = activities.where('start_date_local BETWEEN ? AND ?', start_date, end_date).reorder("start_date_local DESC")
     elsif params[:start_date]
       start_date = params[:start_date].to_datetime
-      activities = current_user.activity.exclude_laps_splits.where('start_date_local > ?', start_date).reorder("start_date_local DESC")
+      index = activities.where('start_date_local > ?', start_date).reorder("start_date_local DESC")
     else
-      activities = current_user.activity.exclude_laps_splits.reorder("start_date_local DESC")
+      index = activities.reorder("start_date_local DESC")
     end
+
     if params[:page]
-      @activities = activities.page(params[:page])
+      @activities = index.page(params[:page])
       @current_page = params[:page].to_i
      render :json => { "pagination" =>{
                                        "current_page": @current_page,
@@ -26,7 +33,7 @@ class Api::V1::ActivitiesController < ApplicationController
                        "activities" => @activities
                      }
     else
-      @activities = activities
+      @activities = index
       render :json => {"activities" => @activities}
     end
   end
@@ -45,8 +52,8 @@ class Api::V1::ActivitiesController < ApplicationController
   end
 
   def show
-    @activity = current_user.activity.find(params[:id])
-    @activity_details = current_user.activity.exclude_laps_splits.find(params[:id])
+    @activity_details = current_user.feed.find(params[:id])
+    @activity = Activity.find(params[:id])
 
     @activity.laps.blank? || @activity.laps == "null" ? @laps = "No lap data" : @laps = JSON.parse(@activity.laps)
     @activity.splits.blank? || @activity.splits == "null" ? @splits = "No split data" : @splits = JSON.parse(@activity.splits)

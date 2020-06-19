@@ -50,3 +50,25 @@ run_3:
   activity_type: Run
   activity_time: 69
   start_date_local: <%= Time.now - 4.day %>
+
+run_4:
+  id: 6
+  distance: 30000
+  avg_hr: 169
+  user_id: 3
+  strava_id: 123123
+  name: Fun Run
+  activity_type: Run
+  activity_time: 69
+  start_date_local: <%= Time.now - 5.day %>
+
+run_5:
+  id: 7
+  distance: 30000
+  avg_hr: 169
+  user_id: 3
+  strava_id: 123124
+  name: Fun Run
+  activity_type: Run
+  activity_time: 69
+  start_date_local: <%= Time.now - 6.day %>

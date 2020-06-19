@@ -109,7 +109,7 @@ class Api::V1::UsersControllerTest < ActionDispatch::IntegrationTest
     assert_equal 123, @user.biometric.last.weight
   end
 
-  test "post create should return error when values out of range" do
+  test "update user weight should not create a new biometrics log if out of range" do
     sign_in(@user)
     assert_difference 'Biometric.count', 0 do
       patch api_v1_user_url(id: 2, user: {weight: 1000, height: 1000}), headers: @authorization
@@ -118,5 +118,86 @@ class Api::V1::UsersControllerTest < ActionDispatch::IntegrationTest
     assert_response 422
     assert_equal ["must be less than 500"], json_response["error"]["params"]["weight"]
     assert_equal ["must be less than 300"], json_response["error"]["params"]["height"]
+  end
+
+  test "post create should follower user" do
+    sign_in(@user)
+    assert_difference 'Relationship.count', 1 do
+      post api_v1_users_url(follower_id: 2, followed_id: 2), headers: @authorization
+    end
+    json_response = JSON.parse(response.body)
+    assert_response 200
+    assert_equal ["User successfully followed"], json_response["success"]
+  end
+
+  test "delete should unfollower user" do
+    sign_in(@user_without_auth)
+    assert_difference 'Relationship.count', -1 do
+      delete api_v1_user_url(id: 1, followed_id: 3), headers: @authorization
+    end
+    json_response = JSON.parse(response.body)
+    assert_response 200
+    assert_equal ["User successfully unfollowed"], json_response["success"]
+  end
+
+  test "post create should throw error for invalid followed id" do
+    sign_in(@user)
+    assert_difference 'Relationship.count', 0 do
+      post api_v1_users_url(follower_id: 2, followed_id: 100), headers: @authorization
+    end
+    json_response = JSON.parse(response.body)
+    assert_response 404
+    assert_equal ["does not exist or the user doesn't have access"], json_response["error"]["user"]
+  end
+
+  test "post create should throw error for already followed id" do
+    sign_in(@user)
+    post api_v1_users_url(follower_id: 2, followed_id: 3), headers: @authorization
+    assert_difference 'Relationship.count', 0 do
+      post api_v1_users_url(follower_id: 2, followed_id: 3), headers: @authorization
+    end
+    json_response = JSON.parse(response.body)
+    assert_response 422
+    assert_equal ["User is already followed"], json_response["error"]["user"]
+  end
+
+  test "post create should throw error for wrong user id" do
+    sign_in(@user)
+    assert_difference 'Relationship.count', 0 do
+      post api_v1_users_url(follower_id: 1, followed_id: 3), headers: @authorization
+    end
+    json_response = JSON.parse(response.body)
+    assert_response 422
+    assert_equal ["does not match authenticated User"], json_response["error"]["user_id"]
+  end
+
+  test "delete should throw error for invalid followed id" do
+    sign_in(@user)
+    assert_difference 'Relationship.count', 0 do
+      delete api_v1_user_url(id: 2, followed_id: 100), headers: @authorization
+    end
+    json_response = JSON.parse(response.body)
+    assert_response 404
+    assert_equal ["does not exist or the user doesn't have access"], json_response["error"]["user"]
+  end
+
+  test "delete should throw error for unfollowed" do
+    sign_in(@user)
+    assert_difference 'Relationship.count', 0 do
+      delete api_v1_user_url(id: 2, followed_id: 3), headers: @authorization
+    end
+    json_response = JSON.parse(response.body)
+    assert_response 422
+    assert_equal ["User is not currently followed"], json_response["error"]["user"]
+  end
+
+  test "delete should throw error for wrong user id" do
+    sign_in(@user)
+    assert_difference 'Relationship.count', 0 do
+      delete api_v1_user_url(id: 1, followed_id: 3), headers: @authorization
+    end
+    json_response = JSON.parse(response.body)
+    assert_response 422
+    assert_equal ["does not match authenticated User"], json_response["error"]["user_id"]
   end
 end

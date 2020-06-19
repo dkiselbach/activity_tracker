@@ -3,6 +3,48 @@ class Api::V1::UsersController < ApplicationController
   before_action :authenticate_user!
   rescue_from ActiveRecord::RecordNotFound, with: :user_error
 
+  def create
+    if params[:follower_id].to_i != current_user.id
+      render :status => :unprocessable_entity,
+             :json => { :error => { :user_id => ["does not match authenticated User"] } }
+      return
+    end
+
+    followed_user = User.find(params[:followed_id]) if params[:followed_id]
+    if !current_user.following?(followed_user)
+      current_user.follow(followed_user)
+      render :status => 200,
+             :json => { :success => ["User successfully followed"]}
+    elsif params[:followed_id]
+      render :status => :unprocessable_entity,
+             :json => { :error => { :user => ["User is already followed"]} }
+    else
+      render :status => :unprocessable_entity,
+             :json => { :error => { :followed_id => ["is blank"] } }
+    end
+  end
+
+  def destroy
+    if params[:id].to_i != current_user.id
+      render :status => :unprocessable_entity,
+             :json => { :error => { :user_id => ["does not match authenticated User"] } }
+      return
+    end
+
+    followed_user = User.find(params[:followed_id]) if params[:followed_id]
+    if current_user.following?(followed_user)
+      current_user.unfollow(followed_user)
+      render :status => 200,
+             :json => { :success => ["User successfully unfollowed"]}
+    elsif params[:followed_id]
+     render :status => :unprocessable_entity,
+            :json => { :error => { :user => ["User is not currently followed"]} }
+    else
+     render :status => :unprocessable_entity,
+            :json => { :error => { :followed_id => ["is blank"] } }
+    end
+  end
+
   def index
     @user = current_user
     longest_run = @user.activity.exclude_laps_splits.where(activity_type: "Run").order("distance DESC").first

@@ -64,6 +64,15 @@ class Api::V1::ActivitiesControllerTest < ActionDispatch::IntegrationTest
       assert json_response["activities"].empty?
     end
 
+    test "get index with include followers should return true" do
+      jwt_login(@user)
+      get api_v1_activities_url(include_followers: true), headers: @authorization
+      json_response = JSON.parse(response.body)
+      activities = @user.activity.all + @user_with_auth.activity.all
+      assert_equal 5, json_response["activities"].count
+      assert_equal 3, json_response["activities"][4]["user_id"]
+    end
+
     test "post create should return error when not logged in" do
       post api_v1_activities_url
       json_response = JSON.parse(response.body)
@@ -92,7 +101,7 @@ class Api::V1::ActivitiesControllerTest < ActionDispatch::IntegrationTest
 
     test "get show with invalid id should return error" do
       jwt_login(@user)
-      get api_v1_activity_url(id: 7), headers: @authorization
+      get api_v1_activity_url(id: 100), headers: @authorization
       json_response = JSON.parse(response.body)
       assert_response 404
       assert_equal ["does not exist or the user doesn't have access"], json_response["error"]["activity"]
@@ -118,9 +127,29 @@ class Api::V1::ActivitiesControllerTest < ActionDispatch::IntegrationTest
       assert_equal "No split data", json_response["splits_metric"]
     end
 
-    test "update activity with invalid id should return error" do
+    test "get show with follower id should return true" do
+      jwt_login(@user)
+      get api_v1_activity_url(id: 7), headers: @authorization
+      json_response = JSON.parse(response.body)
+      assert_response 200
+      assert_equal 7, json_response["activity"]["id"]
+      assert_equal 30000, json_response["activity"]["distance"]
+      assert_equal "No lap data", json_response["laps"]
+      assert_equal "No split data", json_response["splits"]
+      assert_equal "No split data", json_response["splits_metric"]
+    end
+
+    test "update activity with valid id for followed user should return error" do
       jwt_login(@user)
       patch api_v1_activity_url(id: 7, activity: {name: "Test 123", distance: 1000, avg_hr: 123, calories: 123, activity_time: 123}), headers: @authorization
+      json_response = JSON.parse(response.body)
+      assert_response 404
+      assert_equal ["does not exist or the user doesn't have access"], json_response["error"]["activity"]
+    end
+
+    test "update activity with invalid id should return error" do
+      jwt_login(@user)
+      patch api_v1_activity_url(id: 100, activity: {name: "Test 123", distance: 1000, avg_hr: 123, calories: 123, activity_time: 123}), headers: @authorization
       json_response = JSON.parse(response.body)
       assert_response 404
       assert_equal ["does not exist or the user doesn't have access"], json_response["error"]["activity"]
