@@ -46,13 +46,21 @@ class Api::V1::UsersController < ApplicationController
   end
 
   def index
-    @user = current_user
-    longest_run = @user.activity.exclude_laps_splits.where(activity_type: "Run").order("distance DESC").first
-    longest_ride = @user.activity.exclude_laps_splits.where(activity_type: "Ride").order("distance DESC").first
-    fastest_half_marathon = @user.record.where(name: "Half-Marathon").where(pr_rank: 1).order("start_date_local DESC")
-    fastest_10k = @user.record.where(name: "10k").where(pr_rank: 1).order("start_date_local DESC")
-    @user.image.attached? ? profile_image = profile_image_url : profile_image = nil
-    render :json => @user.as_json.merge(:longest_run => longest_run, :longest_ride => longest_ride, :fastest_half_marathon => fastest_half_marathon[0], :fastest_10k => fastest_10k[0], :profile_image => profile_image)
+    users = User.all.map { |user| user.image.attached? ? user.as_json.merge(:profile_image => profile_image_url) : user.as_json.merge(:profile_image => nil) }
+
+    if params[:page]
+      users = User.all.page(params[:page])
+      index = users.map { |user| user.image.attached? ? user.as_json.merge(:profile_image => profile_image_url) : user.as_json.merge(:profile_image => nil) }
+      current_page = params[:page].to_i
+     render :json => { "pagination" =>{
+                                       "current_page": current_page,
+                                       "total_pages": users.total_pages,
+                                       "total": index.count},
+                       "users" => index
+                     }
+    return
+    end
+    render :json => users
   end
 
   def show

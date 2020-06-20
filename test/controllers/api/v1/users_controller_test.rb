@@ -16,11 +16,18 @@ class Api::V1::UsersControllerTest < ActionDispatch::IntegrationTest
     sign_in(@user)
     get api_v1_users_url, headers: @authorization
     json_response = JSON.parse(response.body)
-    assert_equal 2, json_response["id"]
-    assert_equal 3, json_response["longest_run"]["id"]
-    assert_equal 4, json_response["longest_ride"]["id"]
-    assert_equal 1, json_response["fastest_half_marathon"]["id"]
-    assert_nil json_response["profile_image"]
+    assert_equal 5, json_response.count
+    assert_nil json_response[0]["profile_image"]
+  end
+
+  test "get index should paginate with page param" do
+    sign_in(@user)
+    get api_v1_users_url(page: 1), headers: @authorization
+    json_response = JSON.parse(response.body)
+    assert_equal 1, json_response["pagination"]["current_page"]
+    assert_equal 1, json_response["pagination"]["total_pages"]
+    assert_equal 5, json_response["pagination"]["total"]
+    assert_equal 5, json_response["users"].count
   end
 
   test "get index should return image url when user has a valid profile image" do
@@ -29,11 +36,11 @@ class Api::V1::UsersControllerTest < ActionDispatch::IntegrationTest
     sign_in(@user_without_auth)
     get api_v1_users_url, headers: @authorization
     json_response = JSON.parse(response.body)
-    assert_nil json_response["profile_image"]
+    assert_nil json_response[0]["profile_image"]
     post api_v1_auth_index_url(scope: "read,activity:read_all,read_all", code: "Valid_Code"), headers: @authorization
-    get api_v1_user_url(id: 1), headers: @authorization
+    get api_v1_users_url, headers: @authorization
     json_response = JSON.parse(response.body)
-    assert_equal url_for(@user_without_auth.image), json_response["profile_image"]
+    assert_equal url_for(@user_without_auth.image), json_response[4]["profile_image"]
   end
 
   test "get show with no auth should return error" do
