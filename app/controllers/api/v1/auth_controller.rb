@@ -63,5 +63,8 @@ class Api::V1::AuthController < ApplicationController
       render status: :unprocessable_entity,
              json: { error: @error }
     end
+  rescue ApiExceptions::RateLimitError
+    render status: 200,
+           json: { success: ['Strava auth is valid but api is rate limited'] }
   end
 end
