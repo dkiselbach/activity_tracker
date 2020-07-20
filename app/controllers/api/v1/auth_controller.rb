@@ -58,13 +58,10 @@ class Api::V1::AuthController < ApplicationController
     check_auth(current_user, ENV['STRAVA_CLIENT_ID'], ENV['STRAVA_CLIENT_SECRET'])
     if @success
       render status: 200,
-             json: { success: ['Strava auth is valid'] }
+             json: { success: [@success] }
     else
       render status: :unprocessable_entity,
              json: { error: @error }
     end
-  rescue ApiExceptions::RateLimitError
-    render status: 200,
-           json: { success: ['Strava auth is valid but api is rate limited'] }
   end
 end
