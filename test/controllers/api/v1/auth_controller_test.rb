@@ -156,39 +156,45 @@ class Api::V1::AuthControllerTest < ActionDispatch::IntegrationTest
     assert @user_without_auth.reload.image.attached?
   end
 
-  test 'delete destroy with valid auth should remove auth' do
+  test 'disconnect with valid auth should remove auth' do
     # user successfully deauthorizes
     stub_deauthorize_success
-    id = @user_with_valid_auth.auth.id
     jwt_login(@user_with_valid_auth)
     assert_difference 'Auth.count', -1 do
-      delete api_v1_auth_url(id: id), headers: @authorization
+      delete api_v1_auth_url, headers: @authorization
     end
     json_response = JSON.parse(response.body)
     assert_equal ['Strava auth successfully deauthorized'], json_response['success']
     assert @user_with_valid_auth.reload.auth.nil?
   end
 
-  test 'destroy auth with invalid auth should not remove auth' do
-    id = @user_with_valid_auth.auth.id
+  test 'disconnect auth with invalid auth should not remove auth' do
     jwt_login(@user_with_valid_auth)
     assert_no_difference 'Auth.count' do
-      delete api_v1_auth_url(id: id)
+      delete api_v1_auth_url
     end
     json_response = JSON.parse(response.body)
     assert_equal ['Authentication is invalid'], json_response['error']['authentication']
     assert @user_with_valid_auth.auth.valid?
   end
 
-  test 'destroy auth with valid auth but invalid auth token and refresh token should remove auth' do
+  test 'disconnect auth with valid auth but no strava auth should return disconnected' do
+    jwt_login(@user_without_auth)
+    assert_no_difference 'Auth.count' do
+      delete api_v1_auth_url, headers: @authorization
+    end
+    json_response = JSON.parse(response.body)
+    assert_equal ['User has no Strava auth'], json_response['success']
+  end
+
+  test 'disconnect auth with valid auth but invalid auth token and refresh token should remove auth' do
     # user does not deauthorize
     stub_deauthorize_failure
     # user refresh fails
     stub_refresh_token_error
-    id = @user_with_invalid_auth.auth.id
     jwt_login(@user_with_invalid_auth)
     assert_difference 'Auth.count', -1 do
-      delete api_v1_auth_url(id: id), headers: @authorization
+      delete api_v1_auth_url, headers: @authorization
     end
     json_response = JSON.parse(response.body)
     assert_equal ['Strava auth successfully deauthorized'], json_response['success']

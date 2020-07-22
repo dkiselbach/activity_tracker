@@ -54,7 +54,9 @@ class Api::V1::AuthController < ApplicationController
     end
   end
 
-  def destroy
+  def disconnect
+    render status: 200, json: { success: ['User has no Strava auth'] } unless current_user.auth
+
     post("#{ENV['STRAVA_SITE_BASE']}/oauth/deauthorize", {}, current_user.auth.token) if current_user.auth
 
     if @success

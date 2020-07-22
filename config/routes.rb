@@ -8,7 +8,8 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :activities
       resources :users
-      resources :auth, only: %i[create index destroy]
+      resources :auth, only: %i[create index]
+      delete 'auth', to: 'auth#disconnect'
       resources :subscriptions
       resources :biometrics, only: %i[create index]
     end
