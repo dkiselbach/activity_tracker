@@ -54,6 +54,25 @@ class Api::V1::AuthController < ApplicationController
     end
   end
 
+  def destroy
+    post("#{ENV['STRAVA_SITE_BASE']}/oauth/deauthorize", {}, current_user.auth.token) if current_user.auth
+
+    if @success
+      current_user.auth.destroy
+      render status: 200,
+             json: { success: ['Strava auth successfully deauthorized'] }
+    end
+  rescue ApiExceptions::AuthenticationError
+    # using the refreshed token, destroy should work if retried
+    retry if refresh(current_user, ENV['STRAVA_CLIENT_ID'], ENV['STRAVA_CLIENT_SECRET'])
+
+    # User's auth is invalid so remove it
+    current_user.auth.destroy
+
+    render status: 200,
+           json: { success: ['Strava auth successfully deauthorized'] }
+  end
+
   def index
     check_auth(current_user, ENV['STRAVA_CLIENT_ID'], ENV['STRAVA_CLIENT_SECRET'])
     if @success
@@ -63,5 +82,15 @@ class Api::V1::AuthController < ApplicationController
       render status: :unprocessable_entity,
              json: { error: @error }
     end
+  rescue ApiExceptions::AuthenticationError
+    if refresh(current_user, ENV['STRAVA_CLIENT_ID'], ENV['STRAVA_CLIENT_SECRET'])
+      render status: 200, json: { success: ['Strava auth is valid'] }
+      return
+    end
+
+    # User's auth is invalid so remove it
+    current_user.auth.destroy
+
+    render status: 401, json: { error: { strava_auth: ['Strava auth is invalid and has been removed'] } }
   end
 end

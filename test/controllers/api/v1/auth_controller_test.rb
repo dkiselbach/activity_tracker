@@ -32,7 +32,7 @@ class Api::V1::AuthControllerTest < ActionDispatch::IntegrationTest
     jwt_login(@user_with_valid_refresh)
     get api_v1_auth_index_url, headers: @authorization
     json_response = JSON.parse(response.body)
-    assert_equal ['Strava Auth was refreshed'], json_response['success']
+    assert_equal ['Strava auth is valid'], json_response['success']
     assert_not @user_with_valid_refresh.auth.nil?
   end
 
@@ -81,9 +81,12 @@ class Api::V1::AuthControllerTest < ActionDispatch::IntegrationTest
     # user refresh token is invalid and gets an error
     stub_refresh_token_error
     jwt_login(@user_with_invalid_auth)
-    get api_v1_auth_index_url, headers: @authorization
+    assert_difference 'Auth.count', -1 do
+      get api_v1_auth_index_url, headers: @authorization
+    end
     json_response = JSON.parse(response.body)
-    assert_equal ['Refresh Token is invalid'], json_response['error']['refresh_token']
+    assert_equal ['Strava auth is invalid and has been removed'], json_response['error']['strava_auth']
+    assert @user_with_invalid_auth.reload.auth.nil?
   end
 
   test 'post create with no auth should return error' do
@@ -151,5 +154,44 @@ class Api::V1::AuthControllerTest < ActionDispatch::IntegrationTest
     json_response = JSON.parse(response.body)
     assert_equal ['Strava successfully connected'], json_response['success']
     assert @user_without_auth.reload.image.attached?
+  end
+
+  test 'delete destroy with valid auth should remove auth' do
+    # user successfully deauthorizes
+    stub_deauthorize_success
+    id = @user_with_valid_auth.auth.id
+    jwt_login(@user_with_valid_auth)
+    assert_difference 'Auth.count', -1 do
+      delete api_v1_auth_url(id: id), headers: @authorization
+    end
+    json_response = JSON.parse(response.body)
+    assert_equal ['Strava auth successfully deauthorized'], json_response['success']
+    assert @user_with_valid_auth.reload.auth.nil?
+  end
+
+  test 'destroy auth with invalid auth should not remove auth' do
+    id = @user_with_valid_auth.auth.id
+    jwt_login(@user_with_valid_auth)
+    assert_no_difference 'Auth.count' do
+      delete api_v1_auth_url(id: id)
+    end
+    json_response = JSON.parse(response.body)
+    assert_equal ['Authentication is invalid'], json_response['error']['authentication']
+    assert @user_with_valid_auth.auth.valid?
+  end
+
+  test 'destroy auth with valid auth but invalid auth token and refresh token should remove auth' do
+    # user does not deauthorize
+    stub_deauthorize_failure
+    # user refresh fails
+    stub_refresh_token_error
+    id = @user_with_invalid_auth.auth.id
+    jwt_login(@user_with_invalid_auth)
+    assert_difference 'Auth.count', -1 do
+      delete api_v1_auth_url(id: id), headers: @authorization
+    end
+    json_response = JSON.parse(response.body)
+    assert_equal ['Strava auth successfully deauthorized'], json_response['success']
+    assert @user_with_invalid_auth.reload.auth.nil?
   end
 end

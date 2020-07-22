@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery unless: -> { request.format.json? }
   before_action :configure_permitted_parameters, if: :devise_controller?
   respond_to :html, :json
-  rescue_from ApiExceptions::AuthenticationError, with: :refresh_auth
+  # rescue_from ApiExceptions::AuthenticationError, with: :refresh_auth
 
   def refresh_auth
     if refresh(current_user, ENV['STRAVA_CLIENT_ID'], ENV['STRAVA_CLIENT_SECRET'])
