@@ -1,15 +1,14 @@
 # frozen_string_literal: true
 
 class Api::V1::AuthController < ApplicationController
+  require 'open-uri'
   include HttpRequest
   include CheckAuth
   skip_before_action :verify_authenticity_token
   before_action :authenticate_user!
 
   def create
-    scope = 'read,activity:read_all,read_all'
-
-    if params[:code].present? && params[:scope] == scope
+    if params[:code].present? && params[:scope] == ENV['STRAVA_SCOPE']
 
       url = "#{ENV['STRAVA_SITE_BASE']}/oauth/token"
       body = {
@@ -26,10 +25,20 @@ class Api::V1::AuthController < ApplicationController
                                        refresh_token: (results['refresh_token']).to_s)
 
         if auth.save
-          profile_image = open(results['athlete']['profile'])
-          current_user.update(strava_id: (results['athlete']['id']).to_s, strava_username: (results['athlete']['username']).to_s)
+
+          image, id, username, firstname,
+          lastname, city, state,
+          country, sex, created_at = results['athlete'].values_at('profile', 'id', 'username', 'firstname',
+                                                                  'lastname', 'city', 'state',
+                                                                  'country', 'sex', 'created_at')
+
+          current_user.update(strava_id: id, strava_username: username, strava_firstname: firstname,
+                              strava_lastname: lastname, strava_city: city, strava_state: state,
+                              strava_country: country, strava_sex: sex, strava_created_at: created_at)
           current_user.image.purge_later
-          current_user.image.attach(io: profile_image, filename: "#{current_user.strava_username}.jpeg", content_type: 'image/jpg')
+          current_user.image.attach(io: URI.open(image),
+                                    filename: "#{current_user.strava_username}.jpeg",
+                                    content_type: 'image/jpg')
 
           render status: 200,
                  json: { success: ['Strava successfully connected'] }
@@ -44,7 +53,7 @@ class Api::V1::AuthController < ApplicationController
     elsif params[:code].present?
       render status: :unprocessable_entity,
              json: { error: { scope: ['is blank or invalid'] } }
-    elsif params[:scope] == scope
+    elsif params[:scope] == ENV['STRAVA_SCOPE']
       render status: :unprocessable_entity,
              json: { error: { auth_code: ['is blank'] } }
     else

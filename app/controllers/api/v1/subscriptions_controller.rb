@@ -11,6 +11,13 @@ class Api::V1::SubscriptionsController < ApplicationController
   end
 
   def create
+    if params['object_type'] == 'athlete'
+      # currently not handling athlete updates
+      render status: 200,
+             json: { success: ['subscription recieved'] }
+      return
+    end
+
     if @user = User.find_by(strava_id: params['owner_id'])
       if @user.auth
         if params['aspect_type'] == 'create'

@@ -72,4 +72,22 @@ module StravaThrottledStubs
       )
       .to_return(status: status, headers: headers)
   end
+
+  # throttled for athlete update
+  def stub_athlete_update_throttled(options = {})
+    url = 'https://www.strava.com/api/v3/athlete'
+    status = options.fetch(:status, 429)
+    headers = { 'X-RateLimit-Usage': '101,1001' }
+    stub_request(:put, url)
+      .with(
+        headers: {
+          'Accept' => '*/*',
+          'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+          'Authorization' => 'Bearer Valid_Token',
+          'Host' => 'www.strava.com',
+          'User-Agent' => 'Ruby'
+        }
+      )
+      .to_return(status: status, headers: headers)
+  end
 end

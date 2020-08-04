@@ -73,6 +73,25 @@ module StravaAuthStubs
     ).to_return(status: status, body: response_body)
   end
 
+  # when an athlete update is successful
+  def stub_athlete_update_success(options = {})
+    url = 'https://www.strava.com/api/v3/athlete'
+    status = options.fetch(:status, 200)
+    response_body = options.fetch(:response_body,
+                                  json_string('athlete_update_success.json'))
+    stub_request(:put, url).with(
+      body: { 'weight' => '180' },
+      headers: {
+        'Accept' => '*/*',
+        'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+        'Authorization' => 'Bearer Valid_Token',
+        'Content-Type' => 'application/x-www-form-urlencoded',
+        'Host' => 'www.strava.com',
+        'User-Agent' => 'Ruby'
+      }
+    ).to_return(status: status, body: response_body)
+  end
+
   # when initial auth is unsuccesful due to invalid code
   def stub_auth_request_error(options = {})
     url = 'https://www.strava.com/oauth/token'
@@ -118,6 +137,23 @@ module StravaAuthStubs
     response_body = options.fetch(:response_body,
                                   json_string('athlete_auth_error.json'))
     stub_request(:get, url).with(
+      headers: {
+        'Accept' => '*/*',
+        'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
+        'Authorization' => 'Bearer Invalid_Token',
+        'Host' => 'www.strava.com',
+        'User-Agent' => 'Ruby'
+      }
+    ).to_return(status: status, body: response_body)
+  end
+
+  # when an athlete update is unsuccessful due to invalid token
+  def stub_athlete_update_error(options = {})
+    url = 'https://www.strava.com/api/v3/athlete'
+    status = options.fetch(:status, 401)
+    response_body = options.fetch(:response_body,
+                                  json_string('athlete_auth_error.json'))
+    stub_request(:put, url).with(
       headers: {
         'Accept' => '*/*',
         'Accept-Encoding' => 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',

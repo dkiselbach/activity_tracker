@@ -11,6 +11,7 @@ Minitest::Reporters.use!
 WebMock.disable_net_connect!
 
 ENV['STRAVA_SITE_BASE'] = 'https://www.strava.com'
+ENV['STRAVA_SCOPE'] = 'read,read_all,profile:read_all,profile:write,activity:read_all'
 
 class ActiveSupport::TestCase
   # Run tests in parallel with specified workers

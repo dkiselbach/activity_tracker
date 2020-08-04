@@ -13,6 +13,8 @@ class Api::V1::BiometricsController < ApplicationController
   def create
     @biometrics = current_user.biometric.build(biometric_params)
     if @biometrics.save
+      BiometricsUpdateJob.perform_later(@biometrics.id, biometric_params[:weight],
+                                        current_user.id, ENV['STRAVA_CLIENT_ID'], ENV['STRAVA_CLIENT_SECRET'])
       render status: 200,
              json: { success: ['Biometrics created'] }
     else

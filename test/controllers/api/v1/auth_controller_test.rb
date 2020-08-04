@@ -115,7 +115,7 @@ class Api::V1::AuthControllerTest < ActionDispatch::IntegrationTest
 
   test 'post create with no code should return error' do
     jwt_login(@user_without_auth)
-    post api_v1_auth_index_url(scope: 'read,activity:read_all,read_all'), headers: @authorization
+    post api_v1_auth_index_url(scope: ENV['STRAVA_SCOPE']), headers: @authorization
     json_response = JSON.parse(response.body)
     assert_equal ['is blank'], json_response['error']['auth_code']
     assert @user_without_auth.reload.auth.nil?
@@ -123,7 +123,7 @@ class Api::V1::AuthControllerTest < ActionDispatch::IntegrationTest
 
   test 'post create with incorrect scope should return error' do
     jwt_login(@user_without_auth)
-    post api_v1_auth_index_url(scope: 'activity:read_all,read_all', code: 'Valid_Code'), headers: @authorization
+    post api_v1_auth_index_url(scope: 'read,read_all,profile:read_all,profile:write', code: 'Valid_Code'), headers: @authorization
     json_response = JSON.parse(response.body)
     assert_equal ['is blank or invalid'], json_response['error']['scope']
     assert @user_without_auth.reload.auth.nil?
@@ -133,7 +133,7 @@ class Api::V1::AuthControllerTest < ActionDispatch::IntegrationTest
     # user auth request is successful
     stub_auth_request_error
     jwt_login(@user_without_auth)
-    post api_v1_auth_index_url(scope: 'read,activity:read_all,read_all', code: 'Invalid_Code'), headers: @authorization
+    post api_v1_auth_index_url(scope: ENV['STRAVA_SCOPE'], code: 'Invalid_Code'), headers: @authorization
     json_response = JSON.parse(response.body)
     assert_equal ['is invalid'], json_response['error']['auth_code']
     assert @user_without_auth.reload.auth.nil?
@@ -147,13 +147,16 @@ class Api::V1::AuthControllerTest < ActionDispatch::IntegrationTest
     # assert the user has no auth
     assert @user_without_auth.auth.nil?
     jwt_login(@user_without_auth)
-    post api_v1_auth_index_url(scope: 'read,activity:read_all,read_all', code: 'Valid_Code'), headers: @authorization
+    post api_v1_auth_index_url(scope: ENV['STRAVA_SCOPE'], code: 'Valid_Code'), headers: @authorization
     assert @user_without_auth.reload.auth.valid?
     assert_equal 'Valid_Token', @user_without_auth.reload.auth.token
     assert_equal 'Valid_Refresh', @user_without_auth.reload.auth.refresh_token
     json_response = JSON.parse(response.body)
     assert_equal ['Strava successfully connected'], json_response['success']
-    assert @user_without_auth.reload.image.attached?
+    @user_without_auth.reload
+    assert @user_without_auth.image.attached?
+    assert_equal @user_without_auth.strava_sex, 'M'
+    assert_equal @user_without_auth.strava_city, 'San Francisco'
   end
 
   test 'disconnect with valid auth should remove auth' do

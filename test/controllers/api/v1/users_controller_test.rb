@@ -39,7 +39,7 @@ class Api::V1::UsersControllerTest < ActionDispatch::IntegrationTest
     get api_v1_users_url, headers: @authorization
     json_response = JSON.parse(response.body)
     assert_nil json_response[0]['profile_image']
-    post api_v1_auth_index_url(scope: 'read,activity:read_all,read_all', code: 'Valid_Code'), headers: @authorization
+    post api_v1_auth_index_url(scope: ENV['STRAVA_SCOPE'], code: 'Valid_Code'), headers: @authorization
     get api_v1_users_url, headers: @authorization
     json_response = JSON.parse(response.body)
     assert_equal url_for(@user_without_auth.image), json_response[4]['profile_image']
@@ -69,7 +69,7 @@ class Api::V1::UsersControllerTest < ActionDispatch::IntegrationTest
     get api_v1_user_url(id: 1), headers: @authorization
     json_response = JSON.parse(response.body)
     assert_nil json_response['profile_image']
-    post api_v1_auth_index_url(scope: 'read,activity:read_all,read_all', code: 'Valid_Code'), headers: @authorization
+    post api_v1_auth_index_url(scope: ENV['STRAVA_SCOPE'], code: 'Valid_Code'), headers: @authorization
     get api_v1_user_url(id: 1), headers: @authorization
     json_response = JSON.parse(response.body)
     assert_equal url_for(@user_without_auth.image), json_response['profile_image']
@@ -79,7 +79,7 @@ class Api::V1::UsersControllerTest < ActionDispatch::IntegrationTest
     # get a new profile image
     stub_auth_request_success
     sign_in(@user_without_auth)
-    post api_v1_auth_index_url(scope: 'read,activity:read_all,read_all', code: 'Valid_Code'), headers: @authorization
+    post api_v1_auth_index_url(scope: ENV['STRAVA_SCOPE'], code: 'Valid_Code'), headers: @authorization
     assert_enqueued_jobs 1
   end
 
