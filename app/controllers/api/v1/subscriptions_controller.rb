@@ -14,11 +14,12 @@ class Api::V1::SubscriptionsController < ApplicationController
     if params['object_type'] == 'athlete'
       # currently not handling athlete updates
       render status: 200,
-             json: { success: ['subscription recieved'] }
+             json: { success: ['athlete subscription recieved'] }
+      puts params
       return
     end
 
-    if @user = User.find_by(strava_id: params['owner_id'])
+    if (@user = User.find_by(strava_id: params['owner_id']))
       if @user.auth
         if params['aspect_type'] == 'create'
           ActivityCreateJob.perform_later(params['object_id'], @user.id,
@@ -32,7 +33,7 @@ class Api::V1::SubscriptionsController < ApplicationController
       end
     end
     render status: 200,
-           json: { success: ['subscription recieved'] }
+           json: { success: ['activity subscription recieved'] }
   end
 
   private
